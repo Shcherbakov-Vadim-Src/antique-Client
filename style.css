@@ -1,0 +1,168 @@
+body {
+    padding: 30px;
+    background-color: rgb(250, 255, 255);
+}
+
+hr {
+    width: 1400px;
+    margin: 24px 0 20px 0;
+}
+
+.main {
+    width: 1400px;
+    border: 3px solid rgb(170, 164, 164);
+    margin: 0 auto;
+    padding: 30px;
+    height: 975px;
+    background-color: rgb(252, 246, 246);
+}
+
+.linksConteiner {
+    text-align: center;
+    margin: 4px 0 0 0;
+}
+
+.links {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 10px 20px 10px;
+    font-weight: 800;
+}
+
+.photoGoods {
+    width: 250px;
+    height: 255px;
+}
+
+.miniConteinerForGood {
+    padding: 5px;
+    margin: 9px 20px 25px 16px;
+    border: 2px solid rgb(245, 220, 175);
+    width: 300px;
+    text-align: center;
+    background-color: rgb(255, 251, 255);
+    height: 415px;
+}
+
+.buttonEdit {
+    margin: 11px 0 0 171px;
+}
+
+.buttonReset {
+    margin: 0 0 0 3px;
+}
+
+.titleOfGoods {
+    margin: 16px 0 17px 0;
+    font-size: 44px;
+}
+
+.aboutGoods {
+    margin: 7px 0 6px 0px;
+}
+
+.priceGoods {
+    margin: 7px 0 6px 0px;
+}
+
+.listConteinerForGoods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.miniConteinerForGoodSub {
+    padding: 5px;
+    margin: 128px 20px 25px 16px;
+    border: 2px solid rgb(245, 220, 175);
+    width: 437px;
+    text-align: center;
+    background-color: rgb(255, 251, 255);
+    height: 561px;
+}
+
+.buttonEditSub {
+    margin: 13px 0 0 284px;
+}
+
+.buttonResetSub {
+    margin: 0 0 0 3px;
+}
+
+.titleOfGoodsSub {
+    margin: 25px 0 12px 0;
+    font-size: 44px;
+}
+
+.aboutGoodsSub {
+    margin: 7px 0 6px 0px;
+}
+
+.priceGoodsSub {
+    margin: 17px 0 6px 0px;
+}
+
+.listConteinerForGoodsSub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.photoGoodsSub {
+    width: 344px;
+    height: 309px
+}
+
+.goodPageConteinerSub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.paragraphOfGoodsSub {
+    margin: 15px 0 21px 45px;
+    text-align: justify;
+    width: 348px;
+}
+
+.editInput {
+    margin: 38px 0 16px 26px;
+    width: 130px; 
+}
+
+.editMini {
+    margin: 20px 0 -57px 38px;
+    width: 50px;
+}
+
+.inputPrice {
+    margin: 37px 0 0 83px;
+}
+
+.editAbout {
+    margin: 21px 0 -18px -275px;
+}
+
+.photoEdit {
+    width: 344px;
+    height: 309px;
+    margin: 8px 0 0 0
+}
+
+.editForm {
+    padding: 5px;
+    margin: 128px 20px 25px 16px;
+    border: 2px solid rgb(245, 220, 175);
+    width: 437px;
+    text-align: center;
+    background-color: rgb(255, 251, 255);
+    height: 561px;
+}
+
+.editButton {
+    margin: 0 0 0 10px;
+}
+
+.editAboutDate {
+    margin: 17px 0 -17px -313px;
+}
