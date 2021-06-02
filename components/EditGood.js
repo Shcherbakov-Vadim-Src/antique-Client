@@ -16,7 +16,7 @@ export default function EditGood(props) {
         event.preventDefault();
         const formData = new FormData(event.target);
         const data = [...formData.values()];
-        console.log('------>', data);
+        // console.log('------>', data);
         const good = {
             category: [data[2]],
             title: data[0],
@@ -33,11 +33,11 @@ export default function EditGood(props) {
             },
             body: JSON.stringify(good)
         }).then((data) => {
-            console.log('response: ----> ',data);
+            // console.log('response: ----> ',data);
             let rasp = data.json();
-            console.log('rasp: ------> ', rasp);
+            // console.log('rasp: ------> ', rasp);
             rasp.then((data) => {
-                let clone = [...arrGoods];
+                let clone = [...goods];
                 clone.push(data);
                 setGoods(clone);
             })

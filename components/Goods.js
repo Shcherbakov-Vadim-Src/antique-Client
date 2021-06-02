@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import Good from './Good';
+import AddGood from './AddGood';
 
 export default function Goods() {
 
@@ -24,11 +24,21 @@ export default function Goods() {
 
     return (
         <div className="conteinerFirst">
-            <div></div>
+            <div>
+                <div className="clickGoodCont">
+                    <h2 className="addGoodHeader">Добавление товара:</h2>
+                    <Link className="links" to="/goods/add"><button className="addClickGood">Нажмите меня</button></Link>
+                </div>
+            </div>
+            <hr />
             <div></div>
             <div>
                 <div className="listConteinerForGoods">
-                {goods.map(({ _id, title, price, photo }) => {
+                {goods
+                .filter((good) => {
+                        return good.dateOfSale === ''
+                    })
+                .map(({ _id, title, price, photo }) => {
                         return <div key={_id} className="miniConteinerForGood">
                                     <button className="buttonEdit" onClick={() => handleDeleteGood(_id)}>удалить</button>
                                     <Link to={`/goods/${_id}`}><h2 className="titleOfGoods" >{title}</h2></Link>

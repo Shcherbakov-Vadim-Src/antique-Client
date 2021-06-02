@@ -7,7 +7,8 @@ import Contacts from './components/Contacts';
 import News from './components/News';
 import Archive from "./components/Archive";
 import Good from './components/Good';
-import EditGood from './components/EditGood'
+import EditGood from './components/EditGood';
+import AddGood from './components/AddGood';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/goods" exact component={Goods} />
             <Route path="/goods/:id" exact component={Good} />
             <Route path="/goods/edit/:id" exact component={EditGood} />
+            <Route path="/goods/add" exact component={AddGood} />
             <Route path="/news" exact component={News} />
             <Route path="/archive" exact component={Archive} />
             <Route path="/contacts" exact component={Contacts} />
