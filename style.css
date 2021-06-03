@@ -32,6 +32,15 @@ hr {
 .photoGoods {
     width: 250px;
     height: 255px;
+    transition: 0.5s;
+    overflow:hidden;
+}
+
+
+.photoGoods:hover {
+    width: 260px;
+    height: 267px;
+    transition: 0.5s;
 }
 
 .miniConteinerForGood {
