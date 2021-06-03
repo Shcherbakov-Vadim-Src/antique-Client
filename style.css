@@ -285,3 +285,52 @@ hr {
     display: flex;
     flex-direction: row;
 }
+
+.checkSummOfSales {
+    margin: 26px 0 0 0;
+    color: rgb(161, 80, 80);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.checkSummOfSalesSub {
+    margin: 26px 0 0 487px;
+    color: rgb(161, 80, 80);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.checkSummInput {
+    height: 21px;
+    margin: 27px 0 0 36px;
+    padding: 0 0 0 70px;
+    width: 85px;
+}
+
+.checkSummBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.start {
+    margin: 10px 0 0 10px;
+}
+
+.archiveHeader {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonSelect {
+    margin: 10px 0 0 10px;
+}
+
+.select {
+    margin: 9px 0 0 473px;
+    width: 120px;
+    font-size: 15px;
+}

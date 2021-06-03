@@ -12,39 +12,7 @@ export default function EditGood(props) {
         });
     }, []);
 
-    // const onSubmit = (event) => {
-    //     event.preventDefault();
-    //     const formData = new FormData(event.target);
-    //     const data = [...formData.values()];
-    //     // console.log('------>', data);
-    //     const good = {
-    //         category: [data[2]],
-    //         title: data[0],
-    //         price: data[4],
-    //         about: data[1],
-    //         photo: 'https://thumbs.dreamstime.com/b/%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D1%8F%D1%8F-%D0%B1%D1%80%D0%BE%D0%BD%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BC%D0%BE%D0%BD%D0%B5%D1%82%D0%B0-%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-%D1%82%D1%80%D0%B0%D1%8F%D0%BD%D0%B0-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F-%D0%BE%D1%82-%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE-160645117.jpg',
-    //         dateOfPlacement: data[3],
-    //     };
-
-    //     fetch(`http://localhost:3025/api/goods/${props.match.params.id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(good)
-    //     }).then((data) => {
-    //         // console.log('response: ----> ',data);
-    //         let rasp = data.json();
-    //         // console.log('rasp: ------> ', rasp);
-    //         rasp.then((data) => {
-    //             let clone = [...goods];
-    //             clone.push(data);
-    //             setGoods(clone);
-    //         })
-    //     })
-    //     event.target.reset();
-    // }
-
+  
     const fileSubmit = (event) => {
         event.preventDefault();
 
