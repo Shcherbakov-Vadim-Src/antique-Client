@@ -6,6 +6,12 @@ export default function Good(props) {
 
     const [goods, setGoods] = useState([]);
 
+    const [elemen, setElemen] = useState({});
+
+    // setElemen(goods.shift());
+
+    console.log(elemen);
+
     useEffect(() => {
         fetch(`http://localhost:3025/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
             // console.log('----- data ----->', data);
@@ -16,41 +22,49 @@ export default function Good(props) {
     const handleSaleGood = (_id, title, price, about, photo, dateOfPlacement) => {
         let dateOf = String(new Date());
         let arrDate = dateOf.split(' ');
-        // console.log(arrDate);
+
+        console.log('-------arrDate---->', arrDate);
+
         let dateOfSale = [];
         dateOfSale.push(arrDate[3]);
-        
-        if (arrDate[1] === 'Jan'){
+
+        console.log('-------arrDate[3]---->', arrDate[3]);
+
+        if (arrDate[1] === 'Jan') {
             dateOfSale[1] = '01';
-        } else if (arrDate[1] === 'Feb'){
+        } else if (arrDate[1] === 'Feb') {
             dateOfSale.push('02')
-        } else if (arrDate[1] === 'Mar'){
+        } else if (arrDate[1] === 'Mar') {
             dateOfSale.push('03')
-        } else if (arrDate[1] === 'Apr'){
+        } else if (arrDate[1] === 'Apr') {
             dateOfSale.push('04')
-        } else if (arrDate[1] === 'May'){
+        } else if (arrDate[1] === 'May') {
             dateOfSale.push('05')
-        } else if (arrDate[1] === 'Jun'){
+        } else if (arrDate[1] === 'Jun') {
             dateOfSale.push('06')
-        } else if (arrDate[1] === 'Jul'){
+        } else if (arrDate[1] === 'Jul') {
             dateOfSale.push('07')
-        } else if (arrDate[1] === 'Aug'){
+        } else if (arrDate[1] === 'Aug') {
             dateOfSale.push('08')
-        } else if (arrDate[1] === 'Sep'){
+        } else if (arrDate[1] === 'Sep') {
             dateOfSale.push('09')
-        } else if (arrDate[1] === 'Oct'){
+        } else if (arrDate[1] === 'Oct') {
             dateOfSale.push('10')
-        } else if (arrDate[1] === 'Nov'){
+        } else if (arrDate[1] === 'Nov') {
             dateOfSale.push('11')
-        } else if (arrDate[1] === 'Dec'){
+        } else if (arrDate[1] === 'Dec') {
             dateOfSale.push('12')
         }
 
         dateOfSale.push(arrDate[2]);
-        // console.log(dateOfSale);
+
+        console.log('-------dateOfSale---->', dateOfSale);
 
         let todayDate = dateOfSale.join('.');
-        // console.log(todayDate);
+
+        console.log('-------todayDate---->', todayDate);
+
+        
 
         let good = {
             _id: _id,
@@ -59,26 +73,21 @@ export default function Good(props) {
             about: about,
             photo: photo,
             dateOfPlacement: dateOfPlacement,
-            dateOfSale: todayDate
-        } 
+            dateOfSale: todayDate,
+            token: localStorage.getItem('antiqueToken')
+        }
 
-        // console.log(good);
+        console.log('-------correctObject---->', good);
 
-        fetch(`http://localhost:3025/api/goods/${_id}`, {
+        fetch(`http://localhost:3025/api/goods/sale/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(good)
         }).then((data) => {
-            // console.log('response: ----> ',data);
-            let rasp = data.json();
-            // console.log('rasp: ------> ', rasp);
-            rasp.then((data) => {
-                let clone = [...goods];
-                clone.push(data);
-                setGoods(clone);
-            })
+            console.log('response: ----> ',data);
+            window.location.href = '/archive';
         })
 
     }
@@ -87,7 +96,7 @@ export default function Good(props) {
         <div className="goodPageConteinerSub">
             <div className="listConteinerForGoodsSub">
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
-                    return <div  key={_id} className="miniConteinerForGoodSub">
+                    return <div key={_id} className="miniConteinerForGoodSub">
                         <Link to={`/goods/edit/${props.match.params.id}`}><button className="buttonEditSub">редакт.</button></Link>
                         <button className="buttonResetSub" onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)}>продано</button>
                         <h2 className="titleOfGoodsSub">{title}</h2>
@@ -96,7 +105,7 @@ export default function Good(props) {
                         <p className="dateOfGoodsSub">Дата размещения: {dateOfPlacement}</p>
                         <h3 className="priceGoodsSub">Цена: {price} руб.</h3>
                     </div>
-                })
+                })            
                 }
             </div>
         </div>

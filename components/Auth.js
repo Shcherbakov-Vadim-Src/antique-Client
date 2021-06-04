@@ -28,7 +28,6 @@ export default function Auth() {
         })
     }
 
-
     return (
         <div className="loginConteiner">
             <div>
