@@ -334,3 +334,73 @@ hr {
     width: 120px;
     font-size: 15px;
 }
+
+.candleBox {
+    text-align: right;
+}
+
+.candleButton {
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    /* margin: -1px 0 -19px 0; */
+    position: relative;
+    bottom: 24px;
+    right: 62px;
+}
+
+.candleButton:hover {
+    background-color: rgb(252, 229, 252);
+    border-radius: 40%;
+}
+
+.loginForm {
+    width: 438px;
+    border: 3px solid rgb(247, 197, 205);
+    height: 246px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 253, 253);
+    margin: 107px 0 118px 448px;
+}
+
+.loginInput {
+    margin: 79px 0 10px 104px;
+    padding: 0 0 0 96px;
+    width: 130px;
+}
+
+.passwordInput {
+    margin: 0 0 10px 104px;
+    padding: 0 0 0 89px;
+    width: 137px;
+}
+
+.loginButton {
+    margin: 0 0 10px 104px;
+    padding: 0 0 0 0;
+    width: 229px;
+}
+
+.resetButton {
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+    color: rgb(148, 32, 12);
+    font-size: 20px;
+    position: relative;
+    bottom: 24px;
+    right: 62px;
+}
+
+.resetButton:hover {
+    background-color: rgb(255, 253, 253);
+    border-radius: 40%;
+    position: relative;
+    bottom: 24px;
+    right: 62px;
+}

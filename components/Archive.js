@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+
 
 
 export default function Archive() {
@@ -10,7 +10,7 @@ export default function Archive() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3025/api/goods').then(res => res.json()).then((data) => {
+        fetch('http://localhost:3025/api/goods/').then(res => res.json()).then((data) => {  
             setGoods(data);
         })
     }, []);
@@ -98,116 +98,20 @@ export default function Archive() {
             return (checkSumm(goods, '2021.12.01', '2022.01.01'));
           } 
     }
+    
 
     const handleSortSale = (event) => {
         
-        let checkMonth = [];
-        let checkMonthSub = [];
         event.preventDefault();
 
-        const array = [...goods];
         const formData = new FormData(event.target);
         const data = [...formData.values()];
         let stringMonth = data.join('');
 
-        if (stringMonth === 'январь'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.01.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.02.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'февраль'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.02.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.03.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'март'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.03.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.04.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'апрель'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.04.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.05.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'май'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.05.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.06.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'июнь'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.06.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.07.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'июль'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.07.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.08.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'август'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.08.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.09.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'сентябрь'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.09.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.10.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'октябрь'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.10.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.11.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'ноябрь'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.11.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2021.12.01';
-            });
-            setGoods(checkMonthSub);
-        } else if (stringMonth === 'декабрь'){
-            checkMonth = array.filter((good) => {
-                return good.dateOfSale > '2021.12.01';
-            });
-            checkMonthSub = checkMonth.filter((good) => {
-                return good.dateOfSale < '2022.01.01';
-            });
-            setGoods(checkMonthSub);
-        }
-    
+        fetch(`http://localhost:3025/api/goods/archive?month=${stringMonth}`).then(res => res.json()).then((data) => {  
+            setGoods(data);
+        })
+   
     }
 
     const handleClick = () => {

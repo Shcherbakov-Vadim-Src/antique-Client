@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import AddGood from './AddGood';
+import { Link } from "react-router-dom";
+
 
 export default function Goods() {
 
@@ -16,10 +16,13 @@ export default function Goods() {
 
 
     const handleDeleteGood = (_id) => {
-        fetch(`http://localhost:3025/api/goods/${_id}`, {
+        
+        const token = localStorage.getItem('antiqueToken');
+
+        fetch(`http://localhost:3025/api/goods/${_id}?token=${token}`, {
           method: 'DELETE'
         }).then(() => {
-          window.location.reload(); 
+           window.location.reload(); 
       })}
 
     return (

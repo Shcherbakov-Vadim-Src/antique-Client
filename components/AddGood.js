@@ -10,9 +10,12 @@ export default function AddGood() {
     const fileSubmit = (event) => {
         event.preventDefault();
 
+        const data = new FormData(event.target); // event.target is the form
+        data.set('token', localStorage.getItem('antiqueToken')); 
+
         fetch(event.target.action, {
             method: 'POST',
-            body: new FormData(event.target) // event.target is the form
+            body: data
       
         }).then((resp) => {
             return resp.json();

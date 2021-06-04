@@ -16,9 +16,12 @@ export default function EditGood(props) {
     const fileSubmit = (event) => {
         event.preventDefault();
 
+        const data = new FormData(event.target); // event.target is the form
+        data.set('token', localStorage.getItem('antiqueToken')); 
+
         fetch(event.target.action, {
             method: 'PUT',
-            body: new FormData(event.target) // event.target is the form
+            body: data 
       
         }).then((resp) => {
             return resp.json();
