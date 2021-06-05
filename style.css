@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     padding: 30px;
     height: 100%;
-    /* background-color: rgb(247, 240, 240); */
+    background-color: rgb(253, 246, 246);
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -31,9 +31,9 @@ body {
     margin: 0 10px 20px 10px;
     font-weight: 800;
     text-decoration:none;
-    color: rgb(114, 114, 124);
+    color: rgb(3, 3, 3);
     color: transparent;
-    -webkit-text-stroke: 1px rgb(165, 150, 150);
+    -webkit-text-stroke: 1px rgb(8, 8, 8);
     text-decoration: none;
     cursor: pointer;
 }
@@ -74,6 +74,7 @@ body {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none; 
 }
 
 .miniConteinerForGood:hover {
@@ -82,6 +83,7 @@ body {
     position: relative;
     z-index: 5;
     transition: 0.5s;
+    text-decoration: none; 
   }
 
 .buttonEdit {
@@ -618,14 +620,19 @@ h2 {
 
 .map-box { 
 	padding: 34px;
-    background: #fff;
-    border: 1px solid #ddd;
-    z-index: 100;
+    background-color: rgb(253, 251, 251);
+    /* border: 1px solid #ddd;
+    z-index: 100; */
     width: 274px;
     height: 191px;
-    box-shadow: -1px -1px 24px 0px rgb(50 50 50 / 50%);
+    /* box-shadow: -1px -1px 24px 0px rgb(50 50 50 / 50%); */
     border-radius: 20%;
-    margin: 20px 34px 73px 90px;
+    position: relative;
+    top: 296px;
+    left: -336px;
+    -webkit-transition: -webkit-transform .15s linear;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
 .map-box p {
 	font-size: 18px;
@@ -634,6 +641,62 @@ h2 {
 .yandexMap {
     width: 400px;
     position: relative;
-    bottom: 173px;
-    left: 368px;    
+    bottom: -239px;
+    left: 154px;
+}
+
+.thirdPageConteiner {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.contactForm {
+    -webkit-transition: -webkit-transform .15s linear;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    border-radius: 2%;
+    width: 1100px;
+    height: 188px;
+    padding: 1px 15px 15px 27px;
+    margin: 0 0 0 -247px;
+    background-color: rgb(253, 251, 251);
+}
+
+.contactConteinerMini {
+    display: flex;
+    flex-direction: row;
+}
+
+.questionData1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.questionData2 {
+
+}
+
+.questionData {
+    display: flex;
+    flex-direction: row;
+}
+
+.questionArea {
+    margin: 0 0 0 24px;
+    width: 250px;
+    height: 51px;
+}
+
+.inputNameNews {
+    margin: 0px 4px 0 57px;
+    width: 250px;
+}
+
+.inputPostNews {
+    margin: 0px 4px 0 57px;
+    width: 250px;
+}
+
+.inputPhoneNews {
+    margin: 0px 4px 0 57px;
+    width: 250px;
 }
