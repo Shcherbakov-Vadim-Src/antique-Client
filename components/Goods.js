@@ -33,9 +33,8 @@ export default function Goods() {
                     <Link className="links" to="/goods/add"><button className="addClickGood">Нажмите меня</button></Link>
                 </div>
             </div>
-            <hr />
             <div></div>
-            <div>
+            <div className="transformGoods">
                 <div className="listConteinerForGoods">
                 {goods
                 .filter((good) => {
@@ -46,7 +45,7 @@ export default function Goods() {
                                     <button className="buttonEdit" onClick={() => handleDeleteGood(_id)}>удалить</button>
                                     <Link to={`/goods/${_id}`}><h2 className="titleOfGoods" >{title}</h2></Link>
                                     <img className="photoGoods" src={photo} alt="photo goods" />
-                                    <h3 className="priceGoods">Цена: {price} руб.</h3>
+                                    <h3 className="priceGoods">{price} руб.</h3>
                             </div>
                     })
                 }

@@ -50,7 +50,7 @@ function App() {
                     {!token ? <Link to="/auth"><button className="candleButton">🔒</button></Link> : <button onClick={handleResetLogin} type="button" className="resetButton">🞮</button>}
                 </div>
             </div>
-            <hr />
+            {/* <hr /> */}
             <Route path="/" exact component={Client} />
             <Route path="/auth" exact component={Auth} />
             <ProtectedRoute path="/goods" exact component={Goods} />

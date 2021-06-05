@@ -141,7 +141,6 @@ export default function Archive() {
                 </form>
                 <button className="start" onClick={handleClick}>Вывести весь список</button>
                 </div>
-            <hr />
             <div className="archivePageConteiner">
                 {goods
                     .filter((good) => {

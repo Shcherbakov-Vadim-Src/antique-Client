@@ -16,7 +16,7 @@ export default function Goods() {
 
     return (
         <div className="conteinerFirst">
-            <div>
+            <div className="transformGoods">
                 <div className="listConteinerForGoods">
                     {goods
                         .filter((good) => {
@@ -26,7 +26,7 @@ export default function Goods() {
                             return <div key={_id} className="miniConteinerForGood">
                                 <Link to={`/client/goods/${_id}`}><h2 className="titleOfGoods" >{title}</h2></Link>
                                 <img className="photoGoods" src={photo} alt="photo goods" />
-                                <h3 className="priceGoods">Цена: {price} руб.</h3>
+                                <h3 className="priceGoods">{price} руб.</h3>
                             </div>
                         })
                     }
