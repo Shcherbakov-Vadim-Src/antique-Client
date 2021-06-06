@@ -48,15 +48,23 @@ export default function EditGood(props) {
                         <p className="editMini">Наименование:</p>
                         <input type="text" className="editInput" placeholder={title} name="title" />
                         <img className="photoEdit" src={photo} alt="photo goods" />
-                        <input className="editAboutInput" type="file" name="avatar" />
-                        <p className="editAbout">Описание:</p>
-                        <input type="text" className="editAboutInput" placeholder={about} name="about" />
-                        <p className="editAbout">Категория:</p>
-                        <input type="text" className="editAboutInput" placeholder='Категория товара' name="category" />
-                        <p className="editAboutDate">Дата:</p>
-                        <input type="text" className="editInputDate" placeholder='Сегодняшняя дата' name="date" />
-                        <p className="editMini">Цена:</p>
-                        <input type="text" className="inputPrice" placeholder={price} name="price" />
+                        <input className="editAboutInputFile" type="file" name="avatar" />
+                        <div className="editContBox">
+                            <p className="editAbout">Описание:</p>
+                            <input type="text" className="editAboutInput" placeholder={about} name="about" />
+                        </div>
+                        <div className="editContBox">
+                            <p className="editAbout">Категория:</p>
+                            <input type="text" className="editAboutInput" placeholder='Категория товара' name="category" />
+                        </div>
+                        <div className="editContBox">
+                            <p className="editAboutDate">Дата:</p>
+                            <input type="text" className="editInputDate" placeholder='Сегодняшняя дата' name="date" />
+                        </div>
+                        <div className="editContBox">
+                            <p className="editMini">Цена:</p>
+                            <input type="text" className="inputPrice" placeholder={price} name="price" />
+                        </div>
                         <button className="editButton" name="button" type="submit">Изменить</button>
                     </form>
                 })

@@ -151,7 +151,7 @@ export default function Archive() {
                             <h2 className="titleOfArchive">{title}</h2>
                             <img className="photoGoodArchive" src={photo} alt="photo goods" />
                             <p className="paragraphOfGoodArchive">{about}</p>
-                            <p className="priceGoodArchive">Цена: {price} руб.</p>
+                            <p className="priceGoodArchive">{price} руб.</p>
                             <p className="dateOfGoodArchive">Дата размещения: {dateOfPlacement}</p>
                             <p className="dateSaleArchive">Дата продажи: {dateOfSale}</p>
                         </div>

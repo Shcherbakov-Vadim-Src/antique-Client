@@ -195,7 +195,7 @@ h2 {
     text-align: center;
     background-color: rgb(255, 251, 255);
     border-radius: 3%;
-    height: 579px;
+    height: 660px;
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -210,7 +210,7 @@ h2 {
 }
 
 .titleOfGoodsSub {
-    margin: 25px 0 12px 0;
+    margin: 19px 0 26px 0;
     font-size: 44px;
     cursor: pointer;
 }
@@ -220,11 +220,12 @@ h2 {
 }
 
 .priceGoodsSub {
-    margin: 26px 0 6px 0px;
+    margin: 20px 0 6px 0px;
 }
 
 .dateOfGoodsSub {
-    margin: -9px 0 -6px -150px;
+    margin: 0px 0 0px 45px;
+    text-align: left;
 }
 
 .listConteinerForGoodsSub {
@@ -256,38 +257,66 @@ h2 {
 }
 
 .paragraphOfGoodsSub {
-    margin: 15px 0 21px 45px;
+    margin: 15px 0 14px 45px;
     text-align: justify;
     width: 348px;
 }
 
 .editInput {
-    margin: 38px 0 16px 26px;
-    width: 130px; 
+    margin: 37px 0 16px 124px;
+    width: 210px;
 }
 
 .editMini {
-    margin: 20px 0 -57px 38px;
+    margin: 20px 0 -57px 46px;
     width: 50px;
 }
 
 .inputPrice {
-    margin: 37px 0 0 83px;
+    margin: 19px 0 10px 56px;
+    width: 210px;
+    height: 24px;
 }
 
 .editAbout {
-    margin: 21px 0 -18px -275px;
+    margin: 21px 11px 8px 47px;
+}
+
+.editAboutInput {
+    margin: 23px 0 0px 14px;
+    width: 210px;
+}
+
+.editInputDate {
+    margin: 23px 0 0px 14px;
+    width: 210px;
+    height: 24px;
+}
+
+.editContBox {
+    display: flex;
+    flex-direction: row;
 }
 
 .photoEdit {
     width: 344px;
     height: 309px;
-    margin: 8px 0 0 0
+    margin: 8px 0 0 0;
+    transition: 0.5s;
+    border-radius: 2%;
 }
 
+.photoEdit:hover {
+    transition: 0.5s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+
+
 .editForm {
-    padding: 5px;
-    margin: 128px 20px 25px 16px;
+    padding: 33px 5px 5px 5px;
+    margin: 82px 20px 25px 16px;
     width: 437px;
     text-align: center;
     background-color: rgb(255, 251, 255);
@@ -296,14 +325,19 @@ h2 {
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    height: 694px;
 }
 
 .editButton {
-    margin: 0 0 0 10px;
+    margin: 15px 0 0 10px;
+}
+
+.editAboutInputFile {
+    margin: 13px 0 10px 0;
 }
 
 .editAboutDate {
-    margin: 17px 0 -17px -313px;
+    margin: 21px 51px 8px 47px;
 }
 
 .addGoodHeader {
@@ -312,53 +346,76 @@ h2 {
 }
 
 .addForm {
-    display: flex;
-    flex-direction: row;
-    margin: 0 10px 0 15px
+    padding: 5px;
+    margin: 60px 20px 25px 477px;
+    width: 437px;
+    text-align: center;
+    background-color: rgb(255, 251, 255);
+    height: 582px;
+    border-radius: 3%;
+    -webkit-transition: -webkit-transform .15s linear;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .addInput {
-    margin: 0 10px 0 15px
+    margin: 0 10px 0 15px;
+    width: 282px;
+}
+
+.addInputTwo{
+    margin: 0 10px 0 72px;
+    width: 282px;
 }
 
 .addTitleMini{
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 0 10px 5px 15px
+    margin: 41px 10px 19px 15px;
+}
+
+.addTitleMiniTwo{
+    color: rgb(102, 85, 85);
+    font-size: 17px;
+    margin: 14px 10px 19px 15px;
 }
 
 .addAbout {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 0 10px 5px 15px
+    margin: 17px 10px 9px 15px;
 }
 
 .addAboutInput {
-    margin: 0 10px 0 15px
+    margin: 0 10px 0 15px;
+    width: 282px;
 }
 
 .addAboutDate {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 0 10px 5px 15px
+    margin: 17px 10px 9px 15px;
 }
 
 .addInputDate {
-    margin: 0 10px 0 15px
+    margin: 0 10px 0 15px;
+    width: 282px;
 }
 
 .addMini {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 0 10px 5px 15px
+    margin: 17px 10px 9px 15px;
 }
 
 .addPrice {
-    margin: 0 10px 0 15px
+    margin: 0 10px 0 15px;
+    width: 282px;
 }
 
 .addButton {
-    margin: 12px 0 0 20px;
+    margin: 27px 0 0 5px;
     border-radius: -1%;
     width: 87px;
     height: 33px;
@@ -393,7 +450,7 @@ h2 {
 
 .titleOfArchive {
     display: inline;
-    margin: 58px 18px 0 12px;
+    margin: 58px 18px 0 22px;
     width: 122px;
     font-size: 25px;
 }
@@ -412,25 +469,28 @@ h2 {
     -moz-transform: scale(1.3);
     position: relative;
     z-index: 5;
+    left: 15px;
 }
 
 
 
 .paragraphOfGoodArchive {
     width: 400px;
-    margin: 26px 17px 10px 10px; 
+    margin: 17px 17px 10px 10px;
+    text-align: justify;
+    font-size: 15px;
 }
 
 .dateOfGoodArchive {
-    margin: 40px 17px 10px 10px;
+    margin: 63px 17px 10px 10px;
 }
 
 .priceGoodArchive {
-    margin: 40px 17px 10px 10px;
+    margin: 63px 17px 10px 10px;
 }
 
 .dateSaleArchive {
-    margin: 40px 17px 10px 10px;
+    margin: 63px 17px 10px 10px;
 }
 
 .archivePageConteiner {
@@ -587,13 +647,15 @@ h2 {
     -moz-transform: scale(1.4);
     position: relative;
     z-index: 5;
+    left: 25px;
 }
 
 .newsParagraph {
     width: 600px;
     height: 280px;
-    margin: 23px 20px 57px 45px;
+    margin: 30px 20px 57px 45px;
     text-align: justify;
+    font-weight: 300;
 }
 
 .newsPageConteiner {
@@ -618,15 +680,15 @@ h2 {
     height: 652px;
 }
 
-.map-box { 
-	padding: 34px;
+.mapBox { 
+	padding: 6px 34px 34px 30px;
     background-color: rgb(253, 251, 251);
     /* border: 1px solid #ddd;
     z-index: 100; */
     width: 274px;
-    height: 191px;
+    height: 245px;
     /* box-shadow: -1px -1px 24px 0px rgb(50 50 50 / 50%); */
-    border-radius: 20%;
+    border-radius: 2%;
     position: relative;
     top: 296px;
     left: -336px;
@@ -634,7 +696,7 @@ h2 {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
-.map-box p {
+.mapBox p {
 	font-size: 18px;
 }
 
@@ -655,10 +717,14 @@ h2 {
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     border-radius: 2%;
     width: 1100px;
-    height: 188px;
+    height: 195px;
     padding: 1px 15px 15px 27px;
     margin: 0 0 0 -247px;
     background-color: rgb(253, 251, 251);
+}
+
+.inputButtonNews{
+    margin: 10px 0 0 -13px;
 }
 
 .contactConteinerMini {
@@ -681,22 +747,50 @@ h2 {
 }
 
 .questionArea {
-    margin: 0 0 0 24px;
-    width: 250px;
-    height: 51px;
+    margin: 5px 0 0 24px;
+    width: 288px;
+    height: 59px;
+    padding: 10px;
 }
 
 .inputNameNews {
-    margin: 0px 4px 0 57px;
+    margin: 5px 4px 0 177px;
     width: 250px;
 }
 
 .inputPostNews {
-    margin: 0px 4px 0 57px;
+    margin: 7px 4px 3px 177px;
     width: 250px;
 }
 
 .inputPhoneNews {
-    margin: 0px 4px 0 57px;
+    margin: 5px 4px 0 177px;
     width: 250px;
 }
+
+.firstParagraphNews {
+    margin: 14px 0 0 0;
+}
+
+.secondParagraphNews {
+    margin: 3px 0 9px 0;
+}
+
+.mailto {
+	text-transform: none;
+    color: black;
+}
+
+.contactsTitle {
+	font-size: 33px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin: 39px 10px 20px 18px;
+    font-weight: 800;
+    text-decoration:none;
+    color: rgb(3, 3, 3);
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(8, 8, 8);
+    text-decoration: none;  
+}
+
+

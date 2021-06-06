@@ -45,8 +45,8 @@ export default function AddGood() {
                             <input type="text" className="addInput" placeholder="введите наименование" name="title" />
                         </div>
                         <div>
-                            <p className="addTitleMini">Фото:</p>
-                            <input type="file" className="addInput" name="avatar" />
+                            <p className="addTitleMiniTwo">Фото:</p>
+                            <input type="file" className="addInputTwo" name="avatar" />
                         </div>
                         <div>
                             <p className="addAbout">Описание:</p>
