@@ -638,11 +638,11 @@ h2 {
     height: 280px;
     margin: 33px 25px 57px 141px;
     border-radius: 5%;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .newsPictures:hover {
-    transition: 0.5s;
+    transition: 0.7s;
     -webkit-transform: scale(1.4);
     -moz-transform: scale(1.4);
     position: relative;

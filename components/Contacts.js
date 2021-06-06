@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
-
+import emailjs from 'emailjs-com';
+import{ init } from 'emailjs-com';
+init("user_lAh7qgKntgQKM95VVuqUC");
 
 export default function Contacts() {
 
     // let map = <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A73bf29da15b84e639e3263b8c8fcbdcd736518971c082240a3bfcbbfb44ccc04&amp;width=536&amp;height=405&amp;lang=ru_RU&amp;scroll=true"></script>
 
     const getQuestions = (event) => {
+
         event.preventDefault();
-        const formData = new FormData(event.target);
-        const data = [...formData.values()];
-        const dataObj = {
-            name: data[0],
-            mail: data[1],
-            phone: data[2],
-            question: data[3]
-        }
-        console.log(data);
-        console.log('dataObj---->', dataObj);
+
+        emailjs.sendForm('service_ecnq4io', 'template_vev5smp', event.target, 'user_lAh7qgKntgQKM95VVuqUC')
+        .then((result) => {
+            console.log('result.text', result.text);
+        }, (error) => {
+            console.log('error.text', error.text);
+        });
+
         event.target.reset();
     }
 
@@ -29,12 +30,12 @@ export default function Contacts() {
                         <p className="secondParagraphNews" name="second">Оставьте Вашу заявку и я перезвоню.</p>
                         <div className="questionData">
                             <div className="questionData1">
-                                <input className="inputNameNews" name="name" type="text" placeholder="Ваше имя" />
-                                <input className="inputPostNews" name="post" type="text" placeholder="Ваша почта" />
-                                <input className="inputPhoneNews" name="phone" type="text" placeholder="Номер телефона" />
+                                <input className="inputNameNews" name="user_name" type="text" placeholder="Ваше имя" />
+                                <input className="inputPostNews" type="email" name="user_email" placeholder="Ваша почта" />
+                                <input className="inputPhoneNews" name="contact_number" type="text" placeholder="Номер телефона" />
                             </div>
                             <div className="questionData2">
-                                <textarea className="questionArea" type="text" name="question" placeholder="Опишите Ваш вопрос "></textarea>
+                                <textarea className="questionArea" type="text" name="message" placeholder="Опишите Ваш вопрос "></textarea>
                             </div>
                         </div>
                         <button type="submit" className="inputButtonNews" name="button">ОТПРАВИТЬ</button>
