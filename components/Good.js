@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { Button } from 'antd';
 
 export default function Good(props) {
 
@@ -64,8 +64,6 @@ export default function Good(props) {
 
         console.log('-------todayDate---->', todayDate);
 
-        
-
         let good = {
             _id: _id,
             title: title,
@@ -97,8 +95,12 @@ export default function Good(props) {
             <div className="listConteinerForGoodsSub">
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
                     return <div key={_id} className="miniConteinerForGoodSub">
-                        <Link to={`/goods/edit/${props.match.params.id}`}><button className="buttonEditSub">редакт.</button></Link>
-                        <button className="buttonResetSub" onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)}>продано</button>
+                        {/* <Link to={`/goods/edit/${props.match.params.id}`}><button className="buttonEditSub">редакт.</button></Link> */}
+                        <div className="miniConteinerForGoodSub">
+                            <Link to={`/goods/edit/${props.match.params.id}`}><Button className="buttonEditSub">редакт.</Button></Link>
+                            <Button onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)} className="buttonResetSub">продано</Button>
+                        </div>
+                        {/* <button className="buttonResetSub" onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)}>продано</button> */}
                         <h2 className="titleOfGoodsSub">{title}</h2>
                         <img className="photoGoodsSub" src={photo} alt="photo goods" />
                         <p className="paragraphOfGoodsSub">{about}</p>
