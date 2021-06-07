@@ -201,12 +201,16 @@ h2 {
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
 
+.miniButton {
+    margin: 2px 0 -12px 181px;
+}
+
 .buttonEditSub {
-    margin: 13px 0 0 284px;
+    margin: 0 5px 0 0px;
 }
 
 .buttonResetSub {
-    margin: 0 0 0 3px;
+    margin: 0 0px 0 0px;
 }
 
 .titleOfGoodsSub {

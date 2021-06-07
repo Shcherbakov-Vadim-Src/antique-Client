@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Input, Button } from 'antd';
 
 
 export default function EditGood(props) {
@@ -28,7 +28,7 @@ export default function EditGood(props) {
       
         }).then((body) => {
             
-            console.log(body);
+            console.log('body', body);
             if(body.status) {
                 alert(body.message);
             }
@@ -46,26 +46,26 @@ export default function EditGood(props) {
                 {goods.map(({ _id, title, price, about, photo }) => {
                     return <form onSubmit={fileSubmit} key={_id} className="editForm" action={`http://localhost:3025/api/goods/${_id}`} method="put" enctype="multipart/form-data">
                         <p className="editMini">Наименование:</p>
-                        <input type="text" className="editInput" placeholder={title} name="title" />
+                        <Input type="text" className="editInput" placeholder={title} name="title" />
                         <img className="photoEdit" src={photo} alt="photo goods" />
-                        <input className="editAboutInputFile" type="file" name="avatar" />
+                        <Input className="editAboutInputFile" type="file" name="avatar" />
                         <div className="editContBox">
                             <p className="editAbout">Описание:</p>
-                            <input type="text" className="editAboutInput" placeholder={about} name="about" />
+                            <Input type="text" className="editAboutInput" placeholder={about} name="about" />
                         </div>
                         <div className="editContBox">
                             <p className="editAbout">Категория:</p>
-                            <input type="text" className="editAboutInput" placeholder='Категория товара' name="category" />
+                            <Input type="text" className="editAboutInput" placeholder='Категория товара' name="category" />
                         </div>
                         <div className="editContBox">
                             <p className="editAboutDate">Дата:</p>
-                            <input type="text" className="editInputDate" placeholder='Сегодняшняя дата' name="date" />
+                            <Input type="text" className="editInputDate" placeholder='Сегодняшняя дата' name="date" />
                         </div>
                         <div className="editContBox">
                             <p className="editMini">Цена:</p>
-                            <input type="text" className="inputPrice" placeholder={price} name="price" />
+                            <Input type="text" className="inputPrice" placeholder={price} name="price" />
                         </div>
-                        <button className="editButton" name="button" type="submit">Изменить</button>
+                        <Button className="editButton" name="button" htmlType="submit">Изменить</Button>
                     </form>
                 })
                 }

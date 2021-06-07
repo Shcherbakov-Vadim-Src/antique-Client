@@ -96,7 +96,7 @@ export default function Good(props) {
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
                     return <div key={_id} className="miniConteinerForGoodSub">
                         {/* <Link to={`/goods/edit/${props.match.params.id}`}><button className="buttonEditSub">редакт.</button></Link> */}
-                        <div className="miniConteinerForGoodSub">
+                        <div className="miniButton">
                             <Link to={`/goods/edit/${props.match.params.id}`}><Button className="buttonEditSub">редакт.</Button></Link>
                             <Button onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)} className="buttonResetSub">продано</Button>
                         </div>
