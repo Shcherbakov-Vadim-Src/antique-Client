@@ -271,15 +271,57 @@ h2 {
     width: 210px;
 }
 
+.editInputNameDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.editInputFileDiv {
+    margin: 13px 0 0 41px;
+    width: 342px;
+}
+
+.editInputDiv{
+    width: 212px;
+    margin: 0 0 0 24px;
+}
+
+.editAboutInputDiv {
+    width: 212px;
+    margin: 16px 0 0 43px;
+}
+
+.aboutInputDiv {
+    width: 214px;
+    margin: 15px 0 0 43px;
+}
+
+.addInputTitle{
+    display: flex;
+    flex-direction: row ;
+}
+
+.addInputDiv {
+    width: 214px;
+    margin: 73px 0 0 27px;
+}
+
 .editMini {
-    margin: 20px 0 -57px 46px;
-    width: 50px;
+    margin: 18px 0 12px 50px;    
+}
+
+.editMiniP {
+    margin: 4px 0 12px 45px;    
 }
 
 .inputPrice {
     margin: 19px 0 10px 56px;
     width: 210px;
-    height: 24px;
+    height: 30px;
+}
+
+.editButtonDiv{
+    margin: 0 0 5px 0;
 }
 
 .editAbout {
@@ -294,7 +336,7 @@ h2 {
 .editInputDate {
     margin: 23px 0 0px 14px;
     width: 210px;
-    height: 24px;
+    height: 30px;
 }
 
 .editContBox {
@@ -316,6 +358,15 @@ h2 {
     -moz-transform: scale(1.1);
 }
 
+.editInputDateDiv {
+    width: 212px;
+    margin: 17px 0 0 37px;
+}
+
+.inputPriceDiv {
+    width: 212px;
+    margin: 17px 0 0 83px;
+}
 
 
 .editForm {
@@ -323,7 +374,7 @@ h2 {
     margin: 82px 20px 25px 16px;
     width: 437px;
     text-align: center;
-    background-color: rgb(255, 251, 255);
+    background-color: white;
     height: 582px;
     border-radius: 3%;
     -webkit-transition: -webkit-transform .15s linear;
@@ -341,7 +392,7 @@ h2 {
 }
 
 .editAboutDate {
-    margin: 21px 51px 8px 47px;
+    margin: 17px 51px 8px 48px;
 }
 
 .addGoodHeader {
@@ -364,6 +415,14 @@ h2 {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+.addGoodsSub {
+    margin: 36px -1px 0 0;
+}
+
+.addFormButton {
+    margin: -6px 0 0 0;
+}
+
 .addInput {
     margin: 0 10px 0 15px;
     width: 282px;
@@ -377,19 +436,62 @@ h2 {
 .addTitleMini{
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 41px 10px 19px 15px;
+    margin: 73px -9px 15px 40px;
 }
 
-.addTitleMiniTwo{
-    color: rgb(102, 85, 85);
+.addInputTwoDiv {
+    margin: 7px 0 0 39px;
+    width: 253px;
+}
+
+.addAboutBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.addPhotoMiniBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.addTitleMiniTwo {
+    width: 120px;
+    width: 80px;
+    margin: 12px 0 0 22px;
     font-size: 17px;
-    margin: 14px 10px 19px 15px;
 }
 
 .addAbout {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 17px 10px 9px 15px;
+    margin: 8px 0px 8px 41px;
+    width: 84px;
+}
+
+.addAboutInputNext {
+    margin: 6px 0 8px 55px;
+    width: 214px;
+}
+
+.addAboutInputBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.addInputDateBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.addAboutP {
+    color: rgb(102, 85, 85);
+    font-size: 17px;
+    margin: 20px 0px 8px 41px;
+}
+
+.addAboutInputDiv {
+    margin: 19px 0 16px 55px;
+    width: 214px;
 }
 
 .addAboutInput {
@@ -400,8 +502,15 @@ h2 {
 .addAboutDate {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 17px 10px 9px 15px;
+    margin: 14px 0px 8px 21px;
+    width: 84px;
 }
+
+.addInputDateDiv {
+    margin: 12px 0 16px 75px;
+    width: 214px;
+}
+
 
 .addInputDate {
     margin: 0 10px 0 15px;
@@ -411,7 +520,18 @@ h2 {
 .addMini {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 17px 10px 9px 15px;
+    margin: 14px 0px 8px 21px;
+    width: 84px;
+}
+
+.addInputPriceBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.addInputPriceDiv {
+    margin: 12px 0 16px 75px;
+    width: 214px;
 }
 
 .addPrice {

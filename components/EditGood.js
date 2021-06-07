@@ -45,27 +45,43 @@ export default function EditGood(props) {
             <div className="listConteinerForGoodsSub">
                 {goods.map(({ _id, title, price, about, photo }) => {
                     return <form onSubmit={fileSubmit} key={_id} className="editForm" action={`http://localhost:3025/api/goods/${_id}`} method="put" enctype="multipart/form-data">
-                        <p className="editMini">Наименование:</p>
-                        <Input type="text" className="editInput" placeholder={title} name="title" />
+                        <div className="editInputNameDiv">
+                            <p className="editMiniP">Наименование:</p>
+                            <div className="editInputDiv">
+                                <Input type="text" className="editInput" placeholder={title} name="title" />
+                            </div>
+                        </div>
                         <img className="photoEdit" src={photo} alt="photo goods" />
-                        <Input className="editAboutInputFile" type="file" name="avatar" />
+                        <div className="editInputFileDiv">
+                            <Input className="editAboutInputFile" type="file" name="avatar" />
+                        </div>
                         <div className="editContBox">
                             <p className="editAbout">Описание:</p>
-                            <Input type="text" className="editAboutInput" placeholder={about} name="about" />
+                            <div className="aboutInputDiv">
+                                <Input type="text" className="editAboutInput" placeholder={about} name="about" />
+                            </div>                        
                         </div>
                         <div className="editContBox">
                             <p className="editAbout">Категория:</p>
-                            <Input type="text" className="editAboutInput" placeholder='Категория товара' name="category" />
+                            <div className="editAboutInputDiv">
+                                <Input type="text" className="editAboutInput" placeholder='Категория товара' name="category" />
+                            </div>
                         </div>
                         <div className="editContBox">
                             <p className="editAboutDate">Дата:</p>
-                            <Input type="text" className="editInputDate" placeholder='Сегодняшняя дата' name="date" />
+                            <div className="editInputDateDiv">
+                             <Input type="text" className="editInputDate" placeholder='Сегодняшняя дата' name="date" />
+                            </div>
                         </div>
                         <div className="editContBox">
                             <p className="editMini">Цена:</p>
-                            <Input type="text" className="inputPrice" placeholder={price} name="price" />
+                            <div className="inputPriceDiv">
+                                <Input type="text" className="inputPrice" placeholder={price} name="price" />
+                            </div>
                         </div>
-                        <Button className="editButton" name="button" htmlType="submit">Изменить</Button>
+                        <div className="editButtonDiv">
+                            <Button className="editButton" name="button" htmlType="submit">Изменить</Button>
+                        </div>                    
                     </form>
                 })
                 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Input, Button } from 'antd';
 
 
 
@@ -38,35 +39,50 @@ export default function AddGood() {
 
     return (
         <div className="goodAddPage">
-            <div className="addGoodsSub">
+            
                      <form onSubmit={fileSubmit} className="addForm" action="http://localhost:3025/addgoods" method="post" enctype="multipart/form-data">
-                        <div>
+                     <div className="addGoodsSub">
+                        <div className="addInputTitle">
                             <p className="addTitleMini">Наименование:</p>
-                            <input type="text" className="addInput" placeholder="введите наименование" name="title" />
+                            <div className="addInputDiv">
+                                <Input type="text" className="addInput" placeholder="введите наименование" name="title" />
+                            </div>
                         </div>
-                        <div>
+                        <div className="addPhotoMiniBox">
                             <p className="addTitleMiniTwo">Фото:</p>
-                            <input type="file" className="addInputTwo" name="avatar" />
+                            <div className="addInputTwoDiv">
+                                <Input type="file" className="addInputTwo" name="avatar" />
+                            </div>
                         </div>
-                        <div>
-                            <p className="addAbout">Описание:</p>
-                            <input type="text" className="addAboutInput" placeholder="введите описание" name="about" />
+                        <div className="addAboutBox">
+                            <p className="addAboutP">Описание:</p>
+                            <div className="addAboutInputDiv">
+                                <Input type="text" className="addAboutInput" placeholder="введите описание" name="about" />
+                            </div>
                         </div>
-                        <div>
+                        <div className="addAboutInputBox">
                             <p className="addAbout">Категория:</p>
-                            <input type="text" className="addAboutInput" placeholder="введите категорию" name="category" />
+                            <div className="addAboutInputNext">
+                                <Input type="text" className="addAboutInput" placeholder="введите категорию" name="category" />
+                            </div>
                         </div>
-                        <div>
+                        <div className="addInputDateBox">
                             <p className="addAboutDate">Дата:</p>
-                            <input type="text" className="addInputDate" placeholder='сегодняшняя дата' name="date" />
+                            <div className="addInputDateDiv">
+                                <Input type="text" className="addInputDate" placeholder='сегодняшняя дата' name="date" />
+                            </div>
                         </div>
-                        <div>
+                        <div className="addInputPriceBox">
                             <p className="addMini">Цена:</p>
-                            <input type="text" className="addPrice" placeholder="введите стоимость" name="price" />
+                            <div className="addInputPriceDiv">
+                                <Input type="text" className="addPrice" placeholder="введите стоимость" name="price" />
+                            </div>
+                            </div>
+                        <div className="addFormButton">
+                            <Button className="addButton" name="button" htmlType="submit">Добавить</Button>
                         </div>
-                        <button className="addButton" name="button" type="submit">Добавить</button>
+                        </div>
                     </form>
-            </div>
         </div>
     )
 }
