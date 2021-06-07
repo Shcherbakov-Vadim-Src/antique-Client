@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Select, Button, Input } from 'antd';
 
+const { Option } = Select;
 
 
 export default function Archive() {
@@ -137,9 +139,25 @@ export default function Archive() {
                         <option>ноябрь</option>
                         <option>декабрь</option>
                     </select>
-                    <button className="buttonSelect" name="button" type="submit">Сортировка по месяцам</button>
+                    {/* <Select name="select" style={{ width: 120 }}>
+                        <Select.Option value="январь">январь</Select.Option>
+                        <Select.Option value="февраль">февраль</Select.Option>
+                        <Select.Option value="март" >март</Select.Option>
+                        <Select.Option value="апрель">апрель</Select.Option>
+                        <Select.Option value="май">май</Select.Option>
+                        <Select.Option value="июнь">июнь</Select.Option>
+                        <Select.Option value="июль">июль</Select.Option>
+                        <Select.Option value="август">август</Select.Option>
+                        <Select.Option value="сентябрь">сентябрь</Select.Option>
+                        <Select.Option value="октябрь">октябрь</Select.Option>
+                        <Select.Option value="ноябрь">ноябрь</Select.Option>
+                        <Select.Option value="декабрь">декабрь</Select.Option>
+                    </Select> */}
+                    {/* <button className="buttonSelect" name="button" htmlType="submit">Сортировка по месяцам</button> */}
+                    <Button className="buttonSelect" name="button" htmlType="submit">Сортировка по месяцам</Button>
                 </form>
-                <button className="start" onClick={handleClick}>Вывести весь список</button>
+                {/* <button className="start" onClick={handleClick}>Вывести весь список</button> */}
+                <Button className="start" onClick={handleClick}>Вывести весь список</Button>
                 </div>
             <div className="archivePageConteiner">
                 {goods
@@ -162,7 +180,10 @@ export default function Archive() {
                 <p className="checkSummOfSales">За {month} было совершено продаж на сумму {checkSale()} руб.</p>
                 <div className="checkSummBox">
                     <p className="checkSummOfSalesSub">выбрать месяц:</p> 
-                    <input className="checkSummInput" onChange={handleMonth} type="number" placeholder="6" />
+                    {/* <input className="checkSummInput" onChange={handleMonth} type="number" placeholder="6" /> */}
+                    <div className="checkSummInput">
+                        <Input onChange={handleMonth} type="number" placeholder="6" />
+                    </div>
                 </div>
             </div>
         </>

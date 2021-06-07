@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     padding: 30px;
     height: 100%;
-    background-color: rgb(253, 246, 246);
+    background-color: rgb(255, 251, 255);
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -65,7 +65,7 @@ body {
     margin: 9px 20px 25px 16px;
     width: 300px;
     text-align: center;
-    background-color: rgb(255, 251, 255);
+    background-color: white;
     height: 422px;
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
@@ -193,7 +193,7 @@ h2 {
     margin: 69px 20px 25px 16px;
     width: 437px;
     text-align: center;
-    background-color: rgb(255, 251, 255);
+    background-color: white;
     border-radius: 3%;
     height: 660px;
     -webkit-transition: -webkit-transform .15s linear;
@@ -350,7 +350,7 @@ h2 {
     margin: 60px 20px 25px 477px;
     width: 437px;
     text-align: center;
-    background-color: rgb(255, 251, 255);
+    background-color: white;
     height: 582px;
     border-radius: 3%;
     -webkit-transition: -webkit-transform .15s linear;
@@ -428,9 +428,9 @@ h2 {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     border-radius: 5%;
-    background-color: rgb(255, 251, 251);
+    background-color: white;
     margin: 0 0 8px 0;
-    width: 1402px;
+    width: 1331px;
     height: 156px;
     transition: 0.5s;
     -webkit-transform: rotate(-0.2deg);
@@ -512,27 +512,27 @@ h2 {
 
 .checkSummOfSales {
     margin: 26px 0 0 0;
-    color: rgb(161, 80, 80);
+    color: rgb(17, 128, 192);
     font-size: 24px;
     font-weight: 600;
-    font-family: sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     text-align: center;
 }
 
 .checkSummOfSalesSub {
-    margin: 26px 0 0 487px;
-    color: rgb(161, 80, 80);
+    margin: 11px 0 0 487px;
+    color: rgb(17, 128, 192);
     font-size: 24px;
     font-weight: 600;
-    font-family: sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     text-align: center;
 }
 
 .checkSummInput {
     height: 21px;
-    margin: 27px 0 0 36px;
-    padding: 0 0 0 70px;
-    width: 85px;
+    margin: 16px 0 0 37px;
+    padding: 0 0 0 0px;
+    width: 113px;
 }
 
 .checkSummBox {
@@ -555,9 +555,25 @@ h2 {
 }
 
 .select {
-    margin: 9px 0 0 473px;
-    width: 120px;
+    margin: 8px 0 0 403px;
+    width: 169px;
+    padding: 2px 5px 3px 8px;
+    height: 30px;
     font-size: 15px;
+    transition: 0.5s;
+    border: 1px solid rgb(202, 206, 206);
+}
+
+.select:hover {
+    transition: 0.5s;
+    border: 1px solid rgb(89, 177, 250);
+    color: rgb(114, 189, 250);
+}
+
+.select:focus {
+    transition: 0.5s;
+    box-shadow: 0px 0px 3px rgb(67, 171, 255);
+    outline: none;
 }
 
 .candleBox {
@@ -681,21 +697,20 @@ h2 {
 }
 
 .mapBox { 
-	padding: 6px 34px 34px 30px;
-    background-color: rgb(253, 251, 251);
-    /* border: 1px solid #ddd;
-    z-index: 100; */
-    width: 274px;
-    height: 245px;
+	padding: 60px 4px 4px 3px;
+    background-color: white;
+    width: 292px;
+    height: 308px;
     /* box-shadow: -1px -1px 24px 0px rgb(50 50 50 / 50%); */
     border-radius: 2%;
     position: relative;
-    top: 296px;
-    left: -336px;
+    top: 288px;
+    left: -311px;
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
+
 .mapBox p {
 	font-size: 18px;
 }
@@ -703,8 +718,8 @@ h2 {
 .yandexMap {
     width: 400px;
     position: relative;
-    bottom: -239px;
-    left: 154px;
+    bottom: -256px;
+    left: 175px;
 }
 
 .thirdPageConteiner {
@@ -717,14 +732,33 @@ h2 {
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     border-radius: 2%;
     width: 1100px;
-    height: 195px;
+    height: 225px;
     padding: 1px 15px 15px 27px;
     margin: 0 0 0 -247px;
-    background-color: rgb(253, 251, 251);
+    background-color:white;
 }
 
-.inputButtonNews{
-    margin: 10px 0 0 -13px;
+.inputButtonNews {
+    margin: 10px 0 7px -13px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 6px;
+    transition: 0.5s;
+}
+
+.inputButtonNews:hover {
+    border: 1px solid rgb(1, 117, 212);
+    color: rgb(67, 171, 255);
+    transition: 0.5s;
+}
+
+.inputButtonNews:focus {
+    box-shadow: 0px 0px 5px rgb(67, 171, 255);
+    transition: 0.6s;
+}
+
+.inputButtonNe {
+    margin: 10px 0 10px 0;
 }
 
 .contactConteinerMini {
@@ -735,10 +769,7 @@ h2 {
 .questionData1 {
     display: flex;
     flex-direction: column;
-}
-
-.questionData2 {
-
+    margin: 0 0 0 202px;
 }
 
 .questionData {
@@ -748,24 +779,33 @@ h2 {
 
 .questionArea {
     margin: 5px 0 0 24px;
-    width: 288px;
-    height: 59px;
+    width: 266px;
+    height: 107px;
     padding: 10px;
+    transition: 0.5s;
+    border: 1px solid rgb(202, 206, 206);
 }
 
-.inputNameNews {
-    margin: 5px 4px 0 177px;
-    width: 250px;
+::placeholder {
+    color: rgb(199, 195, 195);
+    opacity: 1;
 }
 
-.inputPostNews {
-    margin: 7px 4px 3px 177px;
-    width: 250px;
+.questionArea:hover {
+    border: 1px solid rgb(114, 189, 250);
+    transition: 0.5s;
 }
 
-.inputPhoneNews {
-    margin: 5px 4px 0 177px;
-    width: 250px;
+.questionArea:focus{
+    outline: none;
+    box-shadow: 0px 0px 3px rgb(67, 171, 255);
+    transition: 0.6s;
+}
+
+.inputNameNew {
+    margin: 5px 0 6px -8px;
+    height: 27px;
+    width: 237px;
 }
 
 .firstParagraphNews {
@@ -773,24 +813,27 @@ h2 {
 }
 
 .secondParagraphNews {
-    margin: 3px 0 9px 0;
+    margin: 18px 0 11px 0;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 18px;
+    color: rgb(109, 86, 86);
 }
 
 .mailto {
 	text-transform: none;
-    color: black;
+    color: rgb(141, 119, 119);
 }
 
 .contactsTitle {
 	font-size: 33px;
     font-family: 'ZCOOL KuaiLe', cursive;
-    margin: 39px 10px 20px 18px;
+    margin: 19px 8px 14px 9px;
     font-weight: 800;
-    text-decoration:none;
+    text-decoration: none;
     color: rgb(3, 3, 3);
     color: transparent;
     -webkit-text-stroke: 1px rgb(8, 8, 8);
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 

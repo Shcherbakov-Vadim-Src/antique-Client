@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./style.css";
+import 'antd/dist/antd.css';
 import Goods from './components/Goods';
 import Contacts from './components/Contacts';
 import News from './components/News';
