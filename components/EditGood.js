@@ -51,10 +51,11 @@ export default function EditGood(props) {
                                 <Input type="text" className="editInput" placeholder={title} name="title" />
                             </div>
                         </div>
-                        <img className="photoEdit" src={photo} alt="photo goods" />
+                        {/* <img className="photoEdit" src={photo} alt="photo goods" /> */}
                         <div className="editInputFileDiv">
                             <Input className="editAboutInputFile" type="file" name="avatar" />
                         </div>
+                        <img className="photoEdit" src={photo} alt="photo goods" />
                         <div className="editContBox">
                             <p className="editAbout">Описание:</p>
                             <div className="aboutInputDiv">

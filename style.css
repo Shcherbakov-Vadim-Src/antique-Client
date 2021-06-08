@@ -7,16 +7,14 @@ body {
 }
 
 .main {
-    width: 1400px;
-    /* border: 3px solid rgb(170, 164, 164); */
-    margin: 0 auto;
-    padding: 30px;
-    height: 100%;
     background-color: rgb(255, 251, 255);
+    width: 1500px;
+    margin: 0 auto;
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     border-radius: 5%;
+    padding: 70px 0px 59px 74px;
 } 
 
 .linksConteiner {
@@ -189,13 +187,13 @@ h2 {
   
 
 .miniConteinerForGoodSub {
-    padding: 20px;
-    margin: 69px 20px 25px 16px;
+    padding: 20px 20px 20px 16px;
+    margin: 69px 20px 25px 7px;
     width: 437px;
     text-align: center;
     background-color: white;
     border-radius: 3%;
-    height: 660px;
+    height: 675px;
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -228,7 +226,7 @@ h2 {
 }
 
 .dateOfGoodsSub {
-    margin: 0px 0 0px 45px;
+    margin: 0px 0 0px 31px;
     text-align: left;
 }
 
@@ -261,9 +259,9 @@ h2 {
 }
 
 .paragraphOfGoodsSub {
-    margin: 15px 0 14px 45px;
+    margin: 17px 0 14px 31px;
     text-align: justify;
-    width: 348px;
+    width: 341px;
 }
 
 .editInput {
@@ -277,7 +275,7 @@ h2 {
 }
 
 .editInputFileDiv {
-    margin: 13px 0 0 41px;
+    margin: 13px 0 8px 41px;
     width: 342px;
 }
 
@@ -710,10 +708,9 @@ h2 {
     border: 0;
     background: transparent;
     font-size: 16px;
-    /* margin: -1px 0 -19px 0; */
     position: relative;
-    bottom: 24px;
-    right: 62px;
+    bottom: 52px;
+    right: 161px;
 }
 
 .candleButton:hover {
@@ -762,8 +759,8 @@ h2 {
     color: rgb(148, 32, 12);
     font-size: 20px;
     position: relative;
-    bottom: 24px;
-    right: 62px;
+    bottom: 52px;
+    right: 161px;
 }
 
 .resetButton:hover {
