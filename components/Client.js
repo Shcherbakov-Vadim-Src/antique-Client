@@ -23,11 +23,13 @@ export default function Goods() {
                             return good.dateOfSale === ''
                         })
                         .map(({ _id, title, price, photo }) => {
-                            return <div key={_id} className="miniConteinerForGood">
-                                <Link to={`/client/goods/${_id}`}><h2 className="titleOfGoods" >{title}</h2></Link>
-                                <img className="photoGoods" src={photo} alt="photo goods" />
-                                <h3 className="priceGoods">{price} руб.</h3>
-                            </div>
+                            return (
+                                <div key={_id} className="miniConteinerForGood">
+                                    <img className="photoGoods" src={photo} alt="photo goods" />
+                                    <Link to={`/client/goods/${_id}`}><h2 className="titleOfGoods" >{title}</h2></Link>
+                                    <h3 className="priceGoods">{price} руб.</h3>
+                                </div>
+                            )
                         })
                     }
                 </div>

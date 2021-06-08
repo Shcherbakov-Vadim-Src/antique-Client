@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./style.css";
 import 'antd/dist/antd.css';
+
+import { LockOutlined, LogoutOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+
 import Goods from './components/Goods';
 import Contacts from './components/Contacts';
 import News from './components/News';
@@ -30,27 +34,34 @@ function App() {
         })
     }
 
+    const authClickHandler = () => {
+        window.location.href = '/auth';
+    }
+
     console.log('app');
 
     return (<BrowserRouter>
         <div className="main">
-            <div className="linksConteiner">
-                <Link className="links" to={token ? "/goods" : '/'}>
-                Каталог
-                </Link>
-                <Link className="links" to="/news">
-                Новости
-                </Link>
-                {token ? <Link className="links" to="/archive">
-                Архив
-                </Link> : null}
-                <Link className="links" to="/contacts">
-                Контакты
-                </Link>
-                <div className="candleBox">
-                    {!token ? <Link to="/auth"><button className="candleButton">🔒</button></Link> : <button onClick={handleResetLogin} type="button" className="resetButton">🞮</button>}
+            <header>
+                <h1 className="main-title">Antique</h1>
+                <div className="linksConteiner">
+                    <Link className="links" to={token ? "/goods" : '/'}>
+                    Каталог
+                    </Link>
+                    <Link className="links" to="/news">
+                    Новости
+                    </Link>
+                    {token ? <Link className="links" to="/archive">
+                    Архив
+                    </Link> : null}
+                    <Link className="links" to="/contacts">
+                    Контакты
+                    </Link>
                 </div>
-            </div>
+                <div className="candleBox">
+                    {!token ? <Button onClick={authClickHandler} icon={<LockOutlined />}></Button> : <Button onClick={handleResetLogin} icon={<LogoutOutlined />}></Button>}
+                </div>
+            </header>
             {/* <hr /> */}
             <Route path="/" exact component={Client} />
             <Route path="/auth" exact component={Auth} />

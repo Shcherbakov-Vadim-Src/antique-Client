@@ -1,32 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 body {
-    padding: 30px;
+    padding: 0;
     background-color: rgb(250, 255, 255);
+}
+
+header {
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main {
     background-color: rgb(255, 251, 255);
-    width: 1500px;
+    width: 100%;
     margin: 0 auto;
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    border-radius: 5%;
-    padding: 70px 0px 59px 74px;
+    padding: 0 30px 70px;
+    min-height: 100vh;
 } 
+
+.main-title {
+    font-family: 'Homemade Apple', cursive;
+    color: #40a9ff;
+    font-size: 50px;
+    margin: 0;
+}
 
 .linksConteiner {
     text-align: center;
     margin: 4px 0 0 0;
-    font-family: 'ZCOOL KuaiLe', cursive;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .links {
-    font-size: 37px;
-    font-family: 'ZCOOL KuaiLe', cursive;
-    margin: 0 10px 20px 10px;
+    font-size: 28px;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0 20px 0 0;
     font-weight: 800;
     text-decoration:none;
     color: rgb(3, 3, 3);
@@ -59,7 +73,8 @@ body {
 }
 
 .miniConteinerForGood {
-    padding: 5px;
+    position: relative;
+    padding: 24px;
     margin: 9px 20px 25px 16px;
     width: 298px;
     text-align: center;
@@ -84,8 +99,10 @@ body {
     text-decoration: none; 
   }
 
-.buttonEdit {
-    margin: 8px 0 0 171px;
+button.buttonEdit {
+    position: absolute;
+    top: 0;
+    right: -30px;
 }
 
 .buttonReset {
@@ -98,8 +115,8 @@ Link {
 }
 
 .titleOfGoods {
-    margin: -3px 0 17px 0;
-    font-size: 44px;
+    margin: 10px 0 17px 0;
+    font-size: 27px;
     text-decoration: underline; 
     color: rgb(63, 60, 60);
     text-transform: uppercase;
@@ -132,14 +149,16 @@ h2 {
 }
 
 .priceGoods {
-    margin: 13px 0 16px 24px
+    margin: 13px 0;
+    color: #ababab;
 }
 
 .listConteinerForGoods {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 70px 0 0 0;
+    margin: 30px 0 0 0;
     font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
 }
@@ -622,14 +641,9 @@ h2 {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.addClickGood {
-    margin: 28px 0 0 21px;
-}
-
 .clickGoodCont {
     display: flex;
-    flex-direction: row;
-    text-decoration: none;
+    justify-content: end;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -708,14 +722,16 @@ h2 {
     border: 0;
     background: transparent;
     font-size: 16px;
-    position: relative;
-    bottom: 52px;
-    right: 161px;
 }
 
 .candleButton:hover {
     background-color: rgb(252, 229, 252);
     border-radius: 40%;
+}
+
+.loginConteiner {
+    width: 400px;
+    margin: 100px auto 0;
 }
 
 .loginForm {
