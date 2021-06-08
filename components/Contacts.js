@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Input, Button } from 'antd';
+import { Link } from "react-router-dom";
 
 export default function Contacts() {
 
@@ -35,15 +36,10 @@ export default function Contacts() {
     return (
         <div className="thirdPageConteiner">
             <div className="contactConteinerMini">
-                <div className="yandexMap"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A73bf29da15b84e639e3263b8c8fcbdcd736518971c082240a3bfcbbfb44ccc04&amp;source=constructor" width="536" height="405" frameborder="0"></iframe></div>
                     <form className="contactForm" onSubmit={getQuestions}>
-                        {/* <p className="firstParagraphNews" name="to_name" >Я на связи.</p> */}
                         <p className="secondParagraphNews" name="second">Оставьте Вашу заявку и я перезвоню.</p>
                         <div className="questionData">
-                            <div className="questionData1">
-                                {/* <input className="inputNameNews" name="from_name" id="from_name" type="text" placeholder="Ваше имя" />
-                                <input className="inputPostNews" type="email" name="user_email" placeholder="Ваша почта" />
-                                <input className="inputPhoneNews" name="to_name" id="to_name" type="text" placeholder="Номер телефона" /> */}
+                            <div className="questionData1">                                
                                 <div className="inputNameNew">
                                     <Input name="from_name" type="text" placeholder="Ваше имя" />
                                 </div>
@@ -58,13 +54,17 @@ export default function Contacts() {
                                 <textarea className="questionArea" type="text" name="message" placeholder="Опишите Ваш вопрос "></textarea>
                             </div>
                         </div>
-                            {/* <button type="submit" className="inputButtonNews" name="button">ОТПРАВИТЬ</button> */}
-                            <Button className="inputButtonNe" htmlType="submit">Отправить</Button>
+                            <div className="inputButtonNe">
+                                <Button htmlType="submit">Отправить</Button>
+                            </div>
                     </form>
-                    <div class="mapBox">
-                        <h2 className="contactsTitle" >Мои контакты</h2>
-                        <p><a className="mailto" href="tel:+7 (916) 908-22-10">+7 (916) 908-22-10</a></p>
-                        <p><a className="mailto" href="mailto:79169082210@mail.ru">79169082210@mail.ru</a></p>
+                    <div className="mapAndContact">
+                    <div className="yandexMap"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A73bf29da15b84e639e3263b8c8fcbdcd736518971c082240a3bfcbbfb44ccc04&amp;source=constructor" width="536" height="405" frameborder="0"></iframe></div>
+                        <div class="mapBox">
+                            <Link className="contactsTitle" >Мои контакты</Link>
+                            <p><a className="mailto" href="tel:+7 (916) 908-22-10">+7 (916) 908-22-10</a></p>
+                            <p><a className="mailto" href="mailto:79169082210@mail.ru">79169082210@mail.ru</a></p>
+                        </div>
                     </div>
                 </div>
          </div>

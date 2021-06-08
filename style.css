@@ -10,17 +10,14 @@ header {
     display: flex;
     padding: 40px 0;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .main {
     background-color: rgb(255, 251, 255);
     width: 100%;
     margin: 0 auto;
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    padding: 0 30px 70px;
+    padding: 0 30px 10px;
     min-height: 100vh;
 } 
 
@@ -33,7 +30,7 @@ header {
 
 .linksConteiner {
     text-align: center;
-    margin: 4px 0 0 0;
+    margin: 4px 0 0 -160px;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -79,7 +76,7 @@ header {
     width: 298px;
     text-align: center;
     background-color: white;
-    height: 439px;
+    height: 394px;
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
     transition: 0.5s;
@@ -204,22 +201,22 @@ h2 {
     transition: 0.5s;
 }
   
-
 .miniConteinerForGoodSub {
-    padding: 20px 20px 20px 16px;
-    margin: 69px 20px 25px 7px;
     width: 437px;
-    text-align: center;
-    background-color: white;
-    border-radius: 3%;
-    height: 675px;
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    margin: 64px 20px 25px -90px;
+    display: flex;
+}
+
+.miniContForGoodSub {
+    padding: 0 0 0 378px;
+}
+
+.miniGoodCont {
+    padding: 0 0 0 378px; 
 }
 
 .miniButton {
-    margin: 2px 0 -12px 181px;
+    margin: 0px 0 0px 0px;
 }
 
 .buttonEditSub {
@@ -231,9 +228,14 @@ h2 {
 }
 
 .titleOfGoodsSub {
-    margin: 19px 0 26px 0;
+    margin: 0 auto 33px;
     font-size: 44px;
     cursor: pointer;
+    text-align: center;
+}
+
+.addClickGood {
+    margin: 0 0 0 70px;
 }
 
 .aboutGoodsSub {
@@ -241,11 +243,11 @@ h2 {
 }
 
 .priceGoodsSub {
-    margin: 20px 0 6px 0px;
+    margin: 30px 0 32px 0px;
 }
 
 .dateOfGoodsSub {
-    margin: 0px 0 0px 31px;
+    margin: 0 auto 33px;
     text-align: left;
 }
 
@@ -257,28 +259,57 @@ h2 {
 }
 
 .photoGoodsSub {
-    width: 344px;
-    height: 309px;
+    width: 505px;
+    height: 402px;
     transition: 0.5s;
-    border-radius: 6%
+    border-radius: 2%
 }
 
 .photoGoodsSub:hover {
     transition: 0.5s;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
     position: relative;
     z-index: 5;
+    cursor: pointer;
+}
+
+.photoGoodsS {
+
+}
+
+.photoGoodsS:hover {
+    transition: 0.5s;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.hr {
+    margin: -7px 6px 0 16px;
+    font-size: 35px;
+    font-weight: 100;
+    color: rgb(230, 210, 210);
 }
 
 .goodPageConteinerSub {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 55px 0 0 -343px;
+}
+
+.goodPageConteinerSubEdit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 111px 0 0 -459px;
 }
 
 .paragraphOfGoodsSub {
-    margin: 17px 0 14px 31px;
+    margin: 0 auto 33px;
     text-align: justify;
     width: 341px;
 }
@@ -291,11 +322,16 @@ h2 {
 .editInputNameDiv {
     display: flex;
     flex-direction: row;
+    margin: 56px 0 0 0;
+}
+
+.editBoxSub {
+    padding: 0 0 0 30px;
 }
 
 .editInputFileDiv {
-    margin: 13px 0 8px 41px;
-    width: 342px;
+    margin: 29px 0 -32px 43px;
+    width: 337px;
 }
 
 .editInputDiv{
@@ -338,7 +374,7 @@ h2 {
 }
 
 .editButtonDiv{
-    margin: 0 0 5px 0;
+    margin: 13px 0 5px 39px;
 }
 
 .editAbout {
@@ -362,8 +398,8 @@ h2 {
 }
 
 .photoEdit {
-    width: 344px;
-    height: 309px;
+    width: 505px;
+    height: 407px;
     margin: 8px 0 0 0;
     transition: 0.5s;
     border-radius: 2%;
@@ -387,17 +423,8 @@ h2 {
 
 
 .editForm {
-    padding: 33px 5px 5px 5px;
-    margin: 82px 20px 25px 16px;
     width: 437px;
-    text-align: center;
-    background-color: white;
-    height: 582px;
-    border-radius: 3%;
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    height: 694px;
+    display: flex;
 }
 
 .editButton {
@@ -419,17 +446,11 @@ h2 {
 }
 
 .addForm {
-    padding: 5px;
-    margin: 60px 20px 25px 477px;
     width: 437px;
     text-align: center;
-    background-color: white;
-    height: 582px;
-    border-radius: 3%;
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     font-family: 'Noto Sans TC', sans-serif;
+    margin: 0 auto;
+    padding: 0 0 0 -1px;
 }
 
 .addGoodsSub {
@@ -437,7 +458,7 @@ h2 {
 }
 
 .addFormButton {
-    margin: -6px 0 0 0;
+    margin: -6px 0 0 -18px;
 }
 
 .addInput {
@@ -457,8 +478,8 @@ h2 {
 }
 
 .addInputTwoDiv {
-    margin: 7px 0 0 39px;
-    width: 253px;
+    margin: 7px 0 0 0px;
+    width: 324px;
 }
 
 .addAboutBox {
@@ -474,7 +495,7 @@ h2 {
 .addTitleMiniTwo {
     width: 120px;
     width: 80px;
-    margin: 12px 0 0 22px;
+    margin: 12px 0 0 27px;
     font-size: 17px;
 }
 
@@ -519,13 +540,13 @@ h2 {
 .addAboutDate {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 14px 0px 8px 21px;
+    margin: 14px 0px 8px 22px;
     width: 84px;
 }
 
 .addInputDateDiv {
     margin: 12px 0 16px 75px;
-    width: 214px;
+    width: 205px;
 }
 
 
@@ -537,7 +558,7 @@ h2 {
 .addMini {
     color: rgb(102, 85, 85);
     font-size: 17px;
-    margin: 14px 0px 8px 21px;
+    margin: 14px 0px 8px 23px;
     width: 84px;
 }
 
@@ -548,7 +569,7 @@ h2 {
 
 .addInputPriceDiv {
     margin: 12px 0 16px 75px;
-    width: 214px;
+    width: 210px;
 }
 
 .addPrice {
@@ -557,10 +578,8 @@ h2 {
 }
 
 .addButton {
-    margin: 27px 0 0 5px;
-    border-radius: -1%;
-    width: 87px;
-    height: 33px;
+    margin: 27px 0 0 35px;
+    width: 118px;
 }
 
 .archiveMiniConteiner {
@@ -569,10 +588,10 @@ h2 {
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    border-radius: 5%;
+    border-radius: 2%;
     background-color: white;
     margin: 0 0 8px 0;
-    width: 1331px;
+    width: 1031px;
     height: 156px;
     transition: 0.5s;
     -webkit-transform: rotate(-0.2deg);
@@ -592,7 +611,7 @@ h2 {
 
 .titleOfArchive {
     display: inline;
-    margin: 58px 18px 0 22px;
+    margin: 58px 18px 0 42px;
     width: 122px;
     font-size: 25px;
 }
@@ -624,21 +643,27 @@ h2 {
 }
 
 .dateOfGoodArchive {
-    margin: 63px 17px 10px 10px;
+    margin: 63px 17px 10px 25px;
 }
 
 .priceGoodArchive {
-    margin: 63px 17px 10px 10px;
+    margin: 63px 17px 10px 25px;
 }
 
 .dateSaleArchive {
-    margin: 63px 17px 10px 10px;
+    margin: 63px 17px 10px 25px;
+}
+
+.formSelect {
+    text-align: center;
+    margin: 0 0 0 234px;
 }
 
 .archivePageConteiner {
     padding: 10px 0 0 0;
     text-align: center;
     font-family: 'Noto Sans TC', sans-serif;
+    margin: 0 0 0 396px;
 }
 
 .clickGoodCont {
@@ -657,7 +682,7 @@ h2 {
 }
 
 .checkSummOfSalesSub {
-    margin: 11px 0 0 487px;
+    margin: 11px 0 33px 487px;
     color: rgb(17, 128, 192);
     font-size: 24px;
     font-weight: 600;
@@ -675,6 +700,7 @@ h2 {
 .checkSummBox {
     display: flex;
     flex-direction: row;
+    margin: 0 0 0 258px;
 }
 
 .start {
@@ -814,6 +840,7 @@ h2 {
 
 .newsPageConteiner {
     font-family: 'Noto Sans TC', sans-serif;
+    margin: 0 0 0 250px;
 }
 
 .newsMiniConteiner {
@@ -836,17 +863,9 @@ h2 {
 
 .mapBox { 
 	padding: 60px 4px 4px 3px;
-    background-color: white;
-    width: 292px;
-    height: 308px;
-    /* box-shadow: -1px -1px 24px 0px rgb(50 50 50 / 50%); */
+    width: 365px;
     border-radius: 2%;
-    position: relative;
-    top: 288px;
-    left: -311px;
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    margin: 24px 0 0 177px;
 }
 
 .mapBox p {
@@ -855,9 +874,11 @@ h2 {
 
 .yandexMap {
     width: 400px;
-    position: relative;
-    bottom: -256px;
-    left: 175px;
+    margin: 21px 0 0 350px;
+}
+
+.mapAndContact {
+    display: flex;
 }
 
 .thirdPageConteiner {
@@ -865,43 +886,18 @@ h2 {
 }
 
 .contactForm {
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-    border-radius: 2%;
     width: 1100px;
     height: 225px;
     padding: 1px 15px 15px 27px;
-    margin: 0 0 0 -247px;
-    background-color:white;
-}
-
-.inputButtonNews {
-    margin: 10px 0 7px -13px;
-    background-color: white;
-    border: 1px solid gray;
-    padding: 6px;
-    transition: 0.5s;
-}
-
-.inputButtonNews:hover {
-    border: 1px solid rgb(1, 117, 212);
-    color: rgb(67, 171, 255);
-    transition: 0.5s;
-}
-
-.inputButtonNews:focus {
-    box-shadow: 0px 0px 5px rgb(67, 171, 255);
-    transition: 0.6s;
+    margin: 0 0 0 480px;
 }
 
 .inputButtonNe {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px -222px;
 }
 
 .contactConteinerMini {
-    display: flex;
-    flex-direction: row;
+    margin: 0 auto;
 }
 
 .questionData1 {
@@ -951,10 +947,11 @@ h2 {
 }
 
 .secondParagraphNews {
-    margin: 18px 0 11px 0;
+    margin: 18px 0 11px 143px;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 18px;
     color: rgb(109, 86, 86);
+    width: 600px;
 }
 
 .mailto {
@@ -963,8 +960,7 @@ h2 {
 }
 
 .contactsTitle {
-	font-size: 33px;
-    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 30px;
     margin: 19px 8px 14px 9px;
     font-weight: 800;
     text-decoration: none;
@@ -972,6 +968,5 @@ h2 {
     color: transparent;
     -webkit-text-stroke: 1px rgb(8, 8, 8);
     text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
 }
-
-

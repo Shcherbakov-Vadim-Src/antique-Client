@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from 'antd';
+import { Button, Image } from 'antd';
 
 export default function Good(props) {
 
@@ -84,30 +84,36 @@ export default function Good(props) {
             },
             body: JSON.stringify(good)
         }).then((data) => {
-            console.log('response: ----> ',data);
+            console.log('response: ----> ', data);
             window.location.href = '/archive';
         })
 
     }
+
+    const divStyle = {
+        width: '505px',
+        borderRadius: '2%'
+    };
 
     return (
         <div className="goodPageConteinerSub">
             <div className="listConteinerForGoodsSub">
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
                     return <div key={_id} className="miniConteinerForGoodSub">
-                        {/* <Link to={`/goods/edit/${props.match.params.id}`}><button className="buttonEditSub">редакт.</button></Link> */}
-                        <div className="miniButton">
-                            <Link to={`/goods/edit/${props.match.params.id}`}><Button className="buttonEditSub">редакт.</Button></Link>
-                            <Button onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)} className="buttonResetSub">продано</Button>
+                        <Image className="photoGoodsSub" style={divStyle} width={200} src={photo} alt="photo goods" />
+                        {/* <img className="photoGoodsSub" src={photo} alt="photo goods" /> */}
+                        <div className="miniGoodCont">
+                            <h2 className="titleOfGoodsSub">{title}</h2>
+                            <p className="paragraphOfGoodsSub">{about}</p>
+                            <p className="dateOfGoodsSub">Дата размещения: {dateOfPlacement}</p>
+                            <h3 className="priceGoodsSub">Цена: {price} руб.</h3>
+                            <div className="miniButton">
+                                <Link to={`/goods/edit/${props.match.params.id}`}><Button className="buttonEditSub">изменить</Button></Link>
+                                <Button onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)} className="buttonResetSub">продано</Button>
+                            </div>
                         </div>
-                        {/* <button className="buttonResetSub" onClick={() => handleSaleGood(_id, title, price, about, photo, dateOfPlacement)}>продано</button> */}
-                        <h2 className="titleOfGoodsSub">{title}</h2>
-                        <img className="photoGoodsSub" src={photo} alt="photo goods" />
-                        <p className="paragraphOfGoodsSub">{about}</p>
-                        <p className="dateOfGoodsSub">Дата размещения: {dateOfPlacement}</p>
-                        <h3 className="priceGoodsSub">Цена: {price} руб.</h3>
                     </div>
-                })            
+                })
                 }
             </div>
         </div>

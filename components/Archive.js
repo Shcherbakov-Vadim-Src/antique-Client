@@ -139,23 +139,11 @@ export default function Archive() {
                         <option>ноябрь</option>
                         <option>декабрь</option>
                     </select>
-                    {/* <Select name="select" style={{ width: 120 }}>
-                        <Select.Option value="январь">январь</Select.Option>
-                        <Select.Option value="февраль">февраль</Select.Option>
-                        <Select.Option value="март" >март</Select.Option>
-                        <Select.Option value="апрель">апрель</Select.Option>
-                        <Select.Option value="май">май</Select.Option>
-                        <Select.Option value="июнь">июнь</Select.Option>
-                        <Select.Option value="июль">июль</Select.Option>
-                        <Select.Option value="август">август</Select.Option>
-                        <Select.Option value="сентябрь">сентябрь</Select.Option>
-                        <Select.Option value="октябрь">октябрь</Select.Option>
-                        <Select.Option value="ноябрь">ноябрь</Select.Option>
-                        <Select.Option value="декабрь">декабрь</Select.Option>
-                    </Select> */}
-                    {/* <button className="buttonSelect" name="button" htmlType="submit">Сортировка по месяцам</button> */}
                     <Button className="buttonSelect" name="button" htmlType="submit">Сортировка по месяцам</Button>
                 </form>
+                <div className="hrDiv">
+                    <p className="hr">|</p>
+                </div>
                 {/* <button className="start" onClick={handleClick}>Вывести весь список</button> */}
                 <Button className="start" onClick={handleClick}>Вывести весь список</Button>
                 </div>
@@ -168,7 +156,7 @@ export default function Archive() {
                         return <div key={_id} className="archiveMiniConteiner">
                             <h2 className="titleOfArchive">{title}</h2>
                             <img className="photoGoodArchive" src={photo} alt="photo goods" />
-                            <p className="paragraphOfGoodArchive">{about}</p>
+                            {/* <p className="paragraphOfGoodArchive">{about}</p> */}
                             <p className="priceGoodArchive">{price} руб.</p>
                             <p className="dateOfGoodArchive">Дата размещения: {dateOfPlacement}</p>
                             <p className="dateSaleArchive">Дата продажи: {dateOfSale}</p>
@@ -179,8 +167,7 @@ export default function Archive() {
             <div className="analitycsConteiner">
                 <p className="checkSummOfSales">За {month} было совершено продаж на сумму {checkSale()} руб.</p>
                 <div className="checkSummBox">
-                    <p className="checkSummOfSalesSub">выбрать месяц:</p> 
-                    {/* <input className="checkSummInput" onChange={handleMonth} type="number" placeholder="6" /> */}
+                    <p className="checkSummOfSalesSub">выбрать месяц:</p>
                     <div className="checkSummInput">
                         <Input onChange={handleMonth} type="number" placeholder="6" />
                     </div>

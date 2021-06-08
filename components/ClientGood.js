@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Button, Image } from 'antd';
 
 export default function ClientGood(props) {
 
@@ -12,17 +12,30 @@ export default function ClientGood(props) {
         });
     }, []);
 
+    const handlerClick = () => {
+        window.location.href = '/contacts';
+    }
+
+    const divStyle = {
+        width: '505px',
+        borderRadius: '2%'
+    };
+
 
     return (
         <div className="goodPageConteinerSub">
             <div className="listConteinerForGoodsSub">
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
-                    return <div  key={_id} className="miniConteinerForGoodSub">
-                        <h2 className="titleOfGoodsSub">{title}</h2>
-                        <img className="photoGoodsSub" src={photo} alt="photo goods" />
-                        <p className="paragraphOfGoodsSub">{about}</p>
-                        <p className="dateOfGoodsSub">Дата размещения: {dateOfPlacement}</p>
-                        <h3 className="priceGoodsSub">Цена: {price} руб.</h3>
+                    return <div  key={_id} className="miniConteinerForGoodSub">                        
+                        <Image className="photoGoodsS" style={divStyle} width={200} src={photo} alt="photo goods" />                    
+                        {/* <img className="photoGoodsSub" src={photo} alt="photo goods" /> */}
+                        <div className="miniContForGoodSub">
+                            <h2 className="titleOfGoodsSub">{title}</h2>
+                            <p className="paragraphOfGoodsSub">{about}</p>
+                            <p className="dateOfGoodsSub">Дата размещения: {dateOfPlacement}</p>
+                            <h3 className="priceGoodsSub">Цена: {price} руб.</h3>
+                            <Button className="cliButton" onClick={handlerClick} name="button">Связаться с продавцом</Button>
+                        </div>
                     </div>
                 })
                 }
