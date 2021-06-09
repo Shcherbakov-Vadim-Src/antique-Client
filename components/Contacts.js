@@ -33,6 +33,10 @@ export default function Contacts() {
         event.target.reset();
     }
 
+    const divStyle = {
+        margin: '9px 0 0 0'
+    };
+
     return (
         <div className="thirdPageConteiner">
             <div className="contactConteinerMini">
@@ -62,8 +66,8 @@ export default function Contacts() {
                     <div className="yandexMap"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A73bf29da15b84e639e3263b8c8fcbdcd736518971c082240a3bfcbbfb44ccc04&amp;source=constructor" width="536" height="405" frameborder="0"></iframe></div>
                         <div class="mapBox">
                             <Link className="contactsTitle" >Мои контакты</Link>
-                            <p><a className="mailto" href="tel:+7 (916) 908-22-10">+7 (916) 908-22-10</a></p>
-                            <p><a className="mailto" href="mailto:79169082210@mail.ru">79169082210@mail.ru</a></p>
+                            <p style={divStyle} className="mailtoPar"><a className="mailto" href="tel:+7 (916) 908-22-10">+7 (916) 908-22-10</a></p>
+                            <p style={divStyle}><a className="mailto" href="mailto:79169082210@mail.ru">79169082210@mail.ru</a></p>
                         </div>
                     </div>
                 </div>

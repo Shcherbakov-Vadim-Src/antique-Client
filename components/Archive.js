@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Select, Button, Input } from 'antd';
+import { Select, Button, Input, Image } from 'antd';
 
 const { Option } = Select;
 
@@ -120,6 +120,12 @@ export default function Archive() {
         window.location.reload();
     }
 
+    const divStyle = {
+        width: '194px',
+        height: '142px',
+        borderRadius: '26px'
+    };
+
 
     return (
         <>
@@ -155,7 +161,8 @@ export default function Archive() {
                     .map(({ _id, title, price, about, photo, dateOfPlacement, dateOfSale }) => {
                         return <div key={_id} className="archiveMiniConteiner">
                             <h2 className="titleOfArchive">{title}</h2>
-                            <img className="photoGoodArchive" src={photo} alt="photo goods" />
+                            <Image className="photoGoodArchive" style={divStyle} width={200} src={photo} alt="photo goods" />
+                            {/* <img className="photoGoodArchive" src={photo} alt="photo goods" /> */}
                             {/* <p className="paragraphOfGoodArchive">{about}</p> */}
                             <p className="priceGoodArchive">{price} руб.</p>
                             <p className="dateOfGoodArchive">Дата размещения: {dateOfPlacement}</p>

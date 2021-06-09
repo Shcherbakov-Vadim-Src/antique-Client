@@ -46,6 +46,7 @@ export default function AddGood() {
         }).catch((error) => {
             console.log('chto to poshlo ne tak', error);
         });
+        window.location.href = '/goods';
     }
 
     const divStyle = {

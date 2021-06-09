@@ -22,12 +22,9 @@ export default function EditGood(props) {
         fetch(event.target.action, {
             method: 'PUT',
             body: data 
-      
         }).then((resp) => {
             return resp.json();
-      
         }).then((body) => {
-            
             console.log('body', body);
             if(body.status) {
                 alert(body.message);
@@ -38,6 +35,7 @@ export default function EditGood(props) {
         }).catch((error) => {
             console.log('chto to poshlo ne tak', error);
         });
+        window.location.href = '/goods';  
     }
 
     return (
