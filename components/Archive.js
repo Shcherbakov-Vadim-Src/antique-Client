@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Select, Button, Input, Image } from 'antd';
+import { Link } from "react-router-dom";
 
 const { Option } = Select;
 
@@ -172,9 +173,9 @@ export default function Archive() {
                 }
             </div>
             <div className="analitycsConteiner">
-                <p className="checkSummOfSales">За {month} было совершено продаж на сумму {checkSale()} руб.</p>
+                <Link className="checkSummOfSales">За {month} было совершено продаж на сумму {checkSale()} руб.</Link>
                 <div className="checkSummBox">
-                    <p className="checkSummOfSalesSub">выбрать месяц:</p>
+                    <Link className="checkSummOfSalesSub">выбрать месяц:</Link>
                     <div className="checkSummInput">
                         <Input onChange={handleMonth} type="number" placeholder="6" />
                     </div>

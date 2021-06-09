@@ -736,7 +736,7 @@ h2 {
 }
 
 .archivePageConteiner {
-    padding: 10px 0 0 0;
+    padding: 10px 0 12px 0;
     text-align: center;
     font-family: 'Noto Sans TC', sans-serif;
     margin: 0 0 0 396px;
@@ -749,21 +749,27 @@ h2 {
 }
 
 .checkSummOfSales {
-    margin: 26px 0 0 0;
+    margin: 18px 0 0 582px;
     color: rgb(17, 128, 192);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
-    font-family: "Noto Sans TC", sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     text-align: center;
+    text-decoration: none;
+    /* color: transparent; */
+    -webkit-text-stroke: 1px rgb(8, 8, 8);
 }
 
 .checkSummOfSalesSub {
     margin: 11px 0 33px 487px;
     color: rgb(17, 128, 192);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
     font-family: "Noto Sans TC", sans-serif;
     text-align: center;
+    text-decoration: none;
+    /* color: transparent; */
+    -webkit-text-stroke: 1px rgb(8, 8, 8);
 }
 
 .checkSummInput {
@@ -927,7 +933,7 @@ h2 {
 .newsHeader {
     margin: 28px 0 -11px 45px;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .newsAnchor {
@@ -994,7 +1000,7 @@ h2 {
 .questionData1 {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 202px;
+    margin: 0 0 0 180px;
 }
 
 .questionData {
