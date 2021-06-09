@@ -28,6 +28,10 @@ header {
     margin: 0;
 }
 
+.main-title:hover {
+    cursor: pointer;
+}
+
 .linksConteiner {
     text-align: center;
     margin: 4px 0 0 -160px;

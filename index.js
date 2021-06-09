@@ -38,12 +38,16 @@ function App() {
         window.location.href = '/auth';
     }
 
+    const clickHomePage = () => {
+        window.location.href = '/';
+    }
+
     console.log('app');
 
     return (<BrowserRouter>
         <div className="main">
             <header>
-                <h1 className="main-title">Antique</h1>
+                <h1 onClick={clickHomePage} className="main-title">Antique</h1>
                 <div className="linksConteiner">
                     <Link className="links" to={token ? "/goods" : '/'}>
                     Каталог
