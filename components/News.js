@@ -5,7 +5,7 @@ export default function News() {
     return (
         <div className="newsPageConteiner">
             <div className="newsMiniConteiner">
-                <img className="newsPictures" src="http://antikclub.ru/_nw/67/96160248.jpg" />
+                <img className="newsPictures" src="https://portal-kultura.ru/upload/iblock/b3a/1437221724vds_7896[1].jpg" />
                 <div className="newsMiniBox">
                     <h3 className="newsHeader">ПЛАНИРУЕТСЯ РЕКОНСТРУКЦИЯ НЕВСКОЙ БИТВЫ</h3>
                     <p className="newsParagraph">Комитет по молодежной политике и взаимодействию с общественными организациями объявило конкурс по организации и проведению военно-исторического фестиваля «Невская битва». Максимально исполнителям готовы заплатить 5,8 млн рублей. От подрядчика требуется провести двухдневный фестиваль.
