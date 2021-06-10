@@ -7,7 +7,6 @@ export default function ClientGood(props) {
 
     useEffect(() => {
         fetch(`http://localhost:3025/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
-            // console.log('----- data ----->', data);
             setGoods(data);
         });
     }, []);
@@ -18,7 +17,8 @@ export default function ClientGood(props) {
 
     const divStyle = {
         width: '505px',
-        borderRadius: '2%'
+        borderRadius: '2%',
+        height: '402px'
     };
 
 
@@ -28,7 +28,6 @@ export default function ClientGood(props) {
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
                     return <div  key={_id} className="miniConteinerForGoodSub">                        
                         <Image className="photoGoodsS" style={divStyle} width={200} src={photo} alt="photo goods" />                    
-                        {/* <img className="photoGoodsSub" src={photo} alt="photo goods" /> */}
                         <div className="miniContForGoodSub">
                             <h2 className="titleOfGoodsSub">{title}</h2>
                             <p className="paragraphOfGoodsSub">{about}</p>

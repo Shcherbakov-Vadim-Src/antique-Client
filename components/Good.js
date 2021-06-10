@@ -92,7 +92,8 @@ export default function Good(props) {
 
     const divStyle = {
         width: '505px',
-        borderRadius: '2%'
+        borderRadius: '2%',
+        height: '402px'
     };
 
     return (

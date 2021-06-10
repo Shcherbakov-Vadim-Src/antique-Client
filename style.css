@@ -529,8 +529,26 @@ h2 {
     width: 437px;
     text-align: center;
     font-family: 'Noto Sans TC', sans-serif;
-    margin: 0 auto;
+    margin: 0 0 0 370px;
     padding: 0 0 0 -1px;
+}
+
+.goodAddPage {
+    display: flex;
+    margin: 0 0 0 115px;
+}
+
+.photoAddBox {
+    margin: 36px 0 0 0;
+    width: 505px;
+}
+
+.photoAdd {
+    width: 505px;
+    height: 407px;
+    margin: 28px 0 0 300px;
+    transition: 0.5s;
+    border-radius: 2%;
 }
 
 .addGoodsSub {

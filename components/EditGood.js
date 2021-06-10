@@ -4,7 +4,11 @@ import { Input, Button } from 'antd';
 
 export default function EditGood(props) {
 
-    const [goods, setGoods] = useState([]);
+    const [goods, setGoods] = useState([]); 
+
+    const [file, setFiles] = useState(''); 
+
+    const [imagePreviewUrl, setImagePreviewUrl] = useState(''); 
 
     useEffect(() => {
         fetch(`http://localhost:3025/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
@@ -12,11 +16,21 @@ export default function EditGood(props) {
         });
     }, []);
 
+    const handleImageChange = (event) => {  
+        event.preventDefault();
+        let reader = new FileReader();
+        let file = event.target.files[0];
+        reader.onloadend = () => {
+            setFiles(file);
+            setImagePreviewUrl(reader.result)
+        }
+        reader.readAsDataURL(file)
+    }
   
     const fileSubmit = (event) => {
         event.preventDefault();
 
-        const data = new FormData(event.target); // event.target is the form
+        const data = new FormData(event.target); 
         data.set('token', localStorage.getItem('antiqueToken')); 
 
         fetch(event.target.action, {
@@ -44,12 +58,11 @@ export default function EditGood(props) {
                 {goods.map(({ _id, title, price, about, photo }) => {
                     return <form onSubmit={fileSubmit} key={_id} className="editForm" action={`http://localhost:3025/api/goods/${_id}`} method="put" enctype="multipart/form-data">
                         <div className="photoEditBox">
-                            <img className="photoEdit" src={photo} alt="photo goods" />
-                            
+                            <img className="photoEdit" src={imagePreviewUrl ? imagePreviewUrl : photo} alt="photo goods" />
                         </div>      
                         <div className="editBoxSub">
                             <div className="editInputFileDiv">
-                                <Input className="editAboutInputFile" type="file" name="avatar" />
+                                <Input className="editAboutInputFile" type="file" name="avatar" onChange={(event)=>handleImageChange(event)} />
                             </div>                
                             <div className="editInputNameDiv">
                                 <p className="editMiniP">Наименование:</p>
