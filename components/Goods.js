@@ -9,8 +9,7 @@ export default function Goods() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3025/api/goods').then(res => res.json()).then((data) => {
-        // console.log('------ data ----->', data);
+        fetch('https://antique-api.herokuapp.com/api/goods').then(res => res.json()).then((data) => {
         setGoods(data);
         });
     }, []);
@@ -20,7 +19,7 @@ export default function Goods() {
         
         const token = localStorage.getItem('antiqueToken');
 
-        fetch(`http://localhost:3025/api/goods/${_id}?token=${token}`, {
+        fetch(`https://antique-api.herokuapp.com/api/goods/${_id}?token=${token}`, {
           method: 'DELETE'
         }).then(() => {
            window.location.reload(); 

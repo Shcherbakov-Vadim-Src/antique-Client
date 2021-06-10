@@ -13,7 +13,7 @@ export default function Archive() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3025/api/goods/').then(res => res.json()).then((data) => {  
+        fetch('https://antique-api.herokuapp.com/api/goods/').then(res => res.json()).then((data) => {  
             setGoods(data);
         })
     }, []);
@@ -111,7 +111,7 @@ export default function Archive() {
         const data = [...formData.values()];
         let stringMonth = data.join('');
 
-        fetch(`http://localhost:3025/api/goods/archive?month=${stringMonth}`).then(res => res.json()).then((data) => {  
+        fetch(`https://antique-api.herokuapp.com/api/goods/archive?month=${stringMonth}`).then(res => res.json()).then((data) => {  
             setGoods(data);
         })
    
@@ -151,7 +151,6 @@ export default function Archive() {
                 <div className="hrDiv">
                     <p className="hr">|</p>
                 </div>
-                {/* <button className="start" onClick={handleClick}>Вывести весь список</button> */}
                 <Button className="start" onClick={handleClick}>Вывести весь список</Button>
                 </div>
             <div className="archivePageConteiner">
@@ -163,8 +162,6 @@ export default function Archive() {
                         return <div key={_id} className="archiveMiniConteiner">
                             <h2 className="titleOfArchive">{title}</h2>
                             <Image className="photoGoodArchive" style={divStyle} width={200} src={photo} alt="photo goods" />
-                            {/* <img className="photoGoodArchive" src={photo} alt="photo goods" /> */}
-                            {/* <p className="paragraphOfGoodArchive">{about}</p> */}
                             <p className="priceGoodArchive">{price} руб.</p>
                             <p className="dateOfGoodArchive">Дата размещения: {dateOfPlacement}</p>
                             <p className="dateSaleArchive">Дата продажи: {dateOfSale}</p>

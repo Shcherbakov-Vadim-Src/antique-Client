@@ -3,7 +3,7 @@ import { Form, Input, Button } from 'antd';
 
 export default function Auth() {
     const submit = (values) => {
-        fetch('http://localhost:3025/token', {
+        fetch('https://antique-api.herokuapp.com/token', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

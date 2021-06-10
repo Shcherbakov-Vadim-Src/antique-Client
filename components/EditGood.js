@@ -11,7 +11,7 @@ export default function EditGood(props) {
     const [imagePreviewUrl, setImagePreviewUrl] = useState(''); 
 
     useEffect(() => {
-        fetch(`http://localhost:3025/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
+        fetch(`https://antique-api.herokuapp.com/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
             setGoods(data);
         });
     }, []);
@@ -56,7 +56,7 @@ export default function EditGood(props) {
         <div className="goodPageConteinerSubEdit">
             <div className="listConteinerForGoodsSub">
                 {goods.map(({ _id, title, price, about, photo }) => {
-                    return <form onSubmit={fileSubmit} key={_id} className="editForm" action={`http://localhost:3025/api/goods/${_id}`} method="put" enctype="multipart/form-data">
+                    return <form onSubmit={fileSubmit} key={_id} className="editForm" action={`https://antique-api.herokuapp.com/api/goods/${_id}`} method="put" enctype="multipart/form-data">
                         <div className="photoEditBox">
                             <img className="photoEdit" src={imagePreviewUrl ? imagePreviewUrl : photo} alt="photo goods" />
                         </div>      

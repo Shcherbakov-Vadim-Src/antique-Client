@@ -74,7 +74,7 @@ export default function AddGood() {
             <div className="photoAddBox">
                 <img className="photoAdd" src={imagePreviewUrl ? imagePreviewUrl : ''} alt="Пожалуйста, веберете фото" />
             </div>
-            <form onSubmit={fileSubmit} className="addForm" style={divStyle} action="http://localhost:3025/addgoods" method="post" enctype="multipart/form-data">
+            <form onSubmit={fileSubmit} className="addForm" style={divStyle} action="https://antique-api.herokuapp.com/addgoods" method="post" enctype="multipart/form-data">
                 <div className="addGoodsSub">
                     <div className="addMiniBox">
                         <div className="addInputTitle">

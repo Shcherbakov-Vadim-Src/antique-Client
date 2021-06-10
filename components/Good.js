@@ -8,13 +8,11 @@ export default function Good(props) {
 
     const [elemen, setElemen] = useState({});
 
-    // setElemen(goods.shift());
-
     console.log(elemen);
 
     useEffect(() => {
-        fetch(`http://localhost:3025/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
-            // console.log('----- data ----->', data);
+        fetch(`https://antique-api.herokuapp.com/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
+            
             setGoods(data);
         });
     }, []);
@@ -23,12 +21,8 @@ export default function Good(props) {
         let dateOf = String(new Date());
         let arrDate = dateOf.split(' ');
 
-        console.log('-------arrDate---->', arrDate);
-
         let dateOfSale = [];
         dateOfSale.push(arrDate[3]);
-
-        console.log('-------arrDate[3]---->', arrDate[3]);
 
         if (arrDate[1] === 'Jan') {
             dateOfSale[1] = '01';
@@ -58,11 +52,7 @@ export default function Good(props) {
 
         dateOfSale.push(arrDate[2]);
 
-        console.log('-------dateOfSale---->', dateOfSale);
-
         let todayDate = dateOfSale.join('.');
-
-        console.log('-------todayDate---->', todayDate);
 
         let good = {
             _id: _id,
@@ -77,7 +67,7 @@ export default function Good(props) {
 
         console.log('-------correctObject---->', good);
 
-        fetch(`http://localhost:3025/api/goods/sale/${_id}`, {
+        fetch(`https://antique-api.herokuapp.com/api/goods/sale/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -102,7 +92,6 @@ export default function Good(props) {
                 {goods.map(({ _id, title, price, about, photo, dateOfPlacement }) => {
                     return <div key={_id} className="miniConteinerForGoodSub">
                         <Image className="photoGoodsSub" style={divStyle} width={200} src={photo} alt="photo goods" />
-                        {/* <img className="photoGoodsSub" src={photo} alt="photo goods" /> */}
                         <div className="miniGoodCont">
                             <h2 className="titleOfGoodsSub">{title}</h2>
                             <p className="paragraphOfGoodsSub">{about}</p>

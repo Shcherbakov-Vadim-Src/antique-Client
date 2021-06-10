@@ -6,7 +6,7 @@ export default function ClientGood(props) {
     const [goods, setGoods] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3025/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
+        fetch(`https://antique-api.herokuapp.com/api/goods/${props.match.params.id}`).then(res => res.json()).then((data) => {
             setGoods(data);
         });
     }, []);

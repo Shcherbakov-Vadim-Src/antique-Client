@@ -19,7 +19,7 @@ export default function Contacts() {
         }
         console.log(mail);
 
-        fetch('http://localhost:3025/api/mail', {
+        fetch('https://antique-api.herokuapp.com/api/mail', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
