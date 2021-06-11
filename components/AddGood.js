@@ -30,6 +30,8 @@ export default function AddGood() {
         const data = new FormData(event.target); // event.target is the form
         data.set('token', localStorage.getItem('antiqueToken'));
 
+        console.log('------data--------->', data);
+
         fetch(event.target.action, {
             method: 'POST',
             body: data
@@ -50,7 +52,7 @@ export default function AddGood() {
         }).catch((error) => {
             console.log('chto to poshlo ne tak', error);
         });
-        window.location.href = '/goods';
+        // window.location.href = '/goods';
     }
 
     const handleImageChange = (event) => {  
