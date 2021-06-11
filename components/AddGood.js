@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Input, Button, Upload } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { CloudServerOutlined, UploadOutlined } from '@ant-design/icons';
 
 
 export default function AddGood() {
@@ -25,14 +25,13 @@ export default function AddGood() {
     ];
 
     const fileSubmit = (event) => {
+        console.log(123);
         event.preventDefault();
 
         const data = new FormData(event.target); // event.target is the form
         data.set('token', localStorage.getItem('antiqueToken'));
 
-        console.log('------data--------->', data);
-
-        fetch(event.target.action, {
+        fetch('https://antique-api.herokuapp.com/addgoods', {
             method: 'POST',
             body: data
 
@@ -40,19 +39,12 @@ export default function AddGood() {
             return resp.json();
             //console.log(resp.json());
 
-        }).then((body) => {
-
-            console.log(body);
-            if (body.status) {
-                alert(body.message);
-            }
-            else {
-                alert("Please Select a file to upload");
-            }
+        }).then(() => {
+            window.location.href = '/goods';
         }).catch((error) => {
             console.log('chto to poshlo ne tak', error);
         });
-        // window.location.href = '/goods';
+        
     }
 
     const handleImageChange = (event) => {  
@@ -76,7 +68,7 @@ export default function AddGood() {
             <div className="photoAddBox">
                 <img className="photoAdd" src={imagePreviewUrl ? imagePreviewUrl : ''} alt="Пожалуйста, веберете фото" />
             </div>
-            <form onSubmit={fileSubmit} className="addForm" style={divStyle} action="https://antique-api.herokuapp.com/addgoods" method="post" enctype="multipart/form-data">
+            <form onSubmit={fileSubmit} className="addForm" style={divStyle} method="post" enctype="multipart/form-data">
                 <div className="addGoodsSub">
                     <div className="addMiniBox">
                         <div className="addInputTitle">
