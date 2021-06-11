@@ -25,7 +25,7 @@ function App() {
     let token = localStorage.getItem('antiqueToken');
 
     const handleResetLogin = () => {
-        fetch(`http://localhost:3025/logout?token=${token}`, {
+        fetch(`https://antique-api.herokuapp.com/logout?token=${token}`, {
             method: 'DELETE'
         }).then((up) => {
             console.log(up);
